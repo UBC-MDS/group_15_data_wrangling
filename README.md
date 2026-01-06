@@ -27,6 +27,13 @@ To use group_15_data_wrangling in your code:
 >>> group_15_data_wrangling.hello_world()
 ```
 
+## Contributors
+
+- Limor Winter
+- Shihan Xu
+- Zaki Aslam
+- Michael Eirikson
+
 ## Copyright
 
 - Copyright © 2026 Michael Eirikson.
