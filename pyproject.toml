@@ -18,6 +18,9 @@ version = "0.1.0"
 description = "Provide easy function to streamline simple data wrangling tasks."
 authors = [
     { name = "Michael Eirikson", email = "michaeleirikson@gmail.com" },
+    { name = "Limor Winder", email = ""},
+    { name = "Shihan Xu", email = ""},
+    { name = "Zaki Aslam", email = ""}
 ]
 license = "MIT"
 requires-python = ">= 3.10" # Adjust based on the minimum version of Python that you support
