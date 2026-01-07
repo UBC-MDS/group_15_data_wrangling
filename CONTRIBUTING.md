@@ -1,7 +1,9 @@
-# Contributing
+# Contributing to group_15_data_wrangling
 
 Contributions of all kinds are welcome here, and they are greatly appreciated!
 Every little bit helps, and credit will always be given.
+
+*This CONTRIBUTING.md was adapted from the default Python minimal setup template.*
 
 ## Example Contributions
 
@@ -52,55 +54,29 @@ https://github.com/meirikson/group_15_data_wrangling/issues. If your feedback fi
 the issue templates, please use that. Remember that this is a volunteer-driven
 project and everybody has limited time.
 
-## Get Started!
+## GitHub Workflow for Team Contributions
 
-Ready to contribute? Here's how to set up group_15_data_wrangling for
-local development.
+For this project, our team follows the **GitHub Flow**:
 
-1. Fork the https://github.com/meirikson/group_15_data_wrangling
-   repository on GitHub.
-2. Clone your fork locally (*if you want to work locally*)
+1. **Create a branch** from `main` for each feature, function, or fix.  
+   * Branch naming convention: `feature/<function_name>` or `fix/<issue_name>`
 
-    ```shell
-    git clone git@github.com:your_name_here/group_15_data_wrangling.git
-    ```
+2. **Work on your branch locally**. Make commits regularly with meaningful messages.
 
-3. [Install hatch](https://hatch.pypa.io/latest/install/).
+3. **Push your branch** to GitHub:
 
-4. Create a branch for local development using the default branch (typically `main`) as a starting point. Use `fix` or `feat` as a prefix for your branch name.
+   ```shell
+   git push -u origin <branch_name>
+   ```
 
-    ```shell
-    git checkout main
-    git checkout -b fix-name-of-your-bugfix
-    ```
+4. **Create a pull request (PR)** to merge your branch into main.
+   * Make sure to link the relevant issue if there is one.
 
-    Now you can make your changes locally.
+5. **Another team member reviews the PR** and approves it.  
+   * Provide constructive feedback if changes are needed.
 
-5. When you're done making changes, apply the quality assurance tools and check
-   that your changes pass our test suite. This is all included with tox
+6. Once approved, **merge the PR** into `main`.  
+   * Use “Merge pull request”.
 
-    ```shell
-    hatch run test:run
-    ```
-
-6. Commit your changes and push your branch to GitHub. Please use [semantic
-   commit messages](https://www.conventionalcommits.org/).
-
-    ```shell
-    git add .
-    git commit -m "fix: summarize your changes"
-    git push -u origin fix-name-of-your-bugfix
-    ```
-
-7. Open the link displayed in the message when pushing your new branch in order
-   to submit a pull request.
-
-### Pull Request Guidelines
-
-Before you submit a pull request, check that it meets these guidelines:
-
-1. The pull request should include tests.
-2. If the pull request adds functionality, the docs should be updated. Put your
-   new functionality into a function with a docstring.
-3. Your pull request will automatically be checked by the full test suite.
-   It needs to pass all of them before it can be considered for merging.
+7. **Delete the branch** after merging to keep the repository clean.  
+   * This avoids clutter in the repository and keeps `main` organized.
