@@ -19,7 +19,7 @@ description = "Provide easy function to streamline simple data wrangling tasks."
 authors = [
     { name = "Michael Eirikson", email = "michaeleirikson@gmail.com" },
     { name = "Limor Winder", email = "limorwin@gmail.com"},
-    { name = "Shihan Xu", email = ""},
+    { name = "Shihan Xu", email = "243736206@qq.com" },
     { name = "Zaki Aslam", email = ""}
 ]
 license = "MIT"
