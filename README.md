@@ -20,7 +20,8 @@ This package aim to simplify the data wrangling for the Adult Census Income data
   - sets the data types for each column in the dataset to reduce memory requirements
 - cat_knn_impute()
   - performs imputation of missing values
-- OTHER_FUNC()
+- clean_col_name()
+  - replace "." with "-" and make some names more meaningful
 - OTHER_FUNC()
 
 ### How this package fits into python ecosystem
