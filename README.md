@@ -1,9 +1,9 @@
 # Welcome to group_15_data_wrangling
 
-|        |        |
-|--------|--------|
+|         |        |
+|---------|--------|
 | Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/group_15_data_wrangling.svg)](https://pypi.org/project/group_15_data_wrangling/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/group_15_data_wrangling.svg)](https://pypi.org/project/group_15_data_wrangling/)  |
-| Meta   | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
+| Meta    | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
 
 *TODO: the above badges that indicate python version and package version will only work if your package is on PyPI.
 If you don't plan to publish to PyPI, you can remove them.*
@@ -12,7 +12,7 @@ group_15_data_wrangling is a project that (describe what it does here).
 
 ## Package Summary
 
-This package aim to simplify the data wrangling for the Adult Census Income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income. This will make it easier for someone who want to work with the data to quickly get the dataset in a clean format where they can then start analysis right away.
+This package aim to simplify the data wrangling for the Adult Census Income dataset found here: <https://www.kaggle.com/datasets/uciml/adult-census-income>. This will make it easier for someone who want to work with the data to quickly get the dataset in a clean format where they can then start analysis right away.
 
 ### Functions
 
@@ -36,7 +36,7 @@ There is an existant package called `pyjanitor` that has many useful data cleani
 You can install this package into your preferred Python environment using pip:
 
 ```bash
-$ pip install group_15_data_wrangling
+pip install group_15_data_wrangling
 ```
 
 TODO: Add a brief example of how to use the package to this section
