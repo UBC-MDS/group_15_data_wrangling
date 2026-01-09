@@ -58,7 +58,7 @@ project and everybody has limited time.
 
 For this project, our team follows the **GitHub Flow**:
 
-1. **Create a branch** from `main` for each feature, function, or fix.  
+1. **Create a branch** from `dev-milestone-n` for each feature, function, or fix.  
    * Branch naming convention: `feature/<function_name>` or `fix/<issue_name>`
 
 2. **Work on your branch locally**. Make commits regularly with meaningful messages.
@@ -69,14 +69,20 @@ For this project, our team follows the **GitHub Flow**:
    git push -u origin <branch_name>
    ```
 
-4. **Create a pull request (PR)** to merge your branch into main.
+4. **Create a pull request (PR)** to merge your branch into `dev-milestone-n`.
    * Make sure to link the relevant issue if there is one.
+
+   1. The pull request should include tests.
+   2. If the pull request adds functionality, the docs should be updated. Put your
+   new functionality into a function with a docstring.
+   3. Your pull request will automatically be checked by the full test suite.
+   It needs to pass all of them before it can be considered for merging.
 
 5. **Another team member reviews the PR** and approves it.  
    * Provide constructive feedback if changes are needed.
 
-6. Once approved, **merge the PR** into `main`.  
+6. Once approved, **merge the PR** into `dev-milestone-n`.  
    * Use “Merge pull request”.
 
 7. **Delete the branch** after merging to keep the repository clean.  
-   * This avoids clutter in the repository and keeps `main` organized.
+   * This avoids clutter in the repository and keeps `dev-milestone-n` organized.
