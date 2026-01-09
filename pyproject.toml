@@ -20,7 +20,7 @@ authors = [
     { name = "Michael Eirikson", email = "michaeleirikson@gmail.com" },
     { name = "Limor Winder", email = "limorwin@gmail.com"},
     { name = "Shihan Xu", email = "243736206@qq.com" },
-    { name = "Zaki Aslam", email = ""}
+    { name = "Zaki Aslam", email = "zakiaslam3456@gmail.com"}
 ]
 license = "MIT"
 requires-python = ">= 3.10" # Adjust based on the minimum version of Python that you support
