@@ -10,6 +10,27 @@ If you don't plan to publish to PyPI, you can remove them.*
 
 group_15_data_wrangling is a project that (describe what it does here).
 
+## Package Summary
+
+This package aim to simplify the data wrangling for the Adult Census Income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income. This will make it easier for someone who want to work with the data to quickly get the dataset in a clean format where they can then start analysis right away.
+
+### Functions
+
+- `set_dtype()`
+  - sets the data types for each column in the dataset to reduce memory requirements
+- `cat_knn_impute()`
+  - performs imputation of missing values
+- `clean_col_name()`
+  - replace "." with "-" and make some names more meaningful
+- `encode_income_binary()`
+  - encode the target feature, income, as binary
+
+### How this package fits into python ecosystem
+
+There is an existant package called `pyjanitor` that has many useful data cleaning routines. These are general purpose and very powerful. Our package is much more focused on cleaning the specific adult census income dataset. In general `pyjanitor` is a much more useful package, but to tidy our specific dataset our functions will probably do the job with less effort.
+
+`pyjanitor`: <https://github.com/pyjanitor-devs/pyjanitor>
+
 ## Get started
 
 You can install this package into your preferred Python environment using pip:
