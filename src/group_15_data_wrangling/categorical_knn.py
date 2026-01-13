@@ -1,39 +1,39 @@
 import pandas as pd
 
-def cat_knn_impute(data, columns=None, sign="?", n_neighbors=5):
+def cat_mode_impute(data, columns=None, sign="?"):
     """
-    Performs cleaning and KNN-based imputation for categorical data.
+    Performs cleaning and mode-based imputation for categorical data.
 
     This function identifies missing values (e.g. "?"),
-    and uses a K-Nearest Neighbors to predict and fill those missing values
-    based on the most similar rows. 
-    It specifically solves the limitation of scikit-learn's KNNImputer
-    by handling categorical string data.
+    and replaces them with the most frequent (mode) category observed
+    in that column. The imputation is performed independently for each
+    targeted column.
+    If multiple categories are tied for the mode, the imputed value is
+    chosen deterministically as the lexicographically smallest category.
 
     Parameters
     ----------
     data : pd.DataFrame
         The raw input DataFrame (e.g., Adult Census Income data).
-    columns : list of str
+    columns : list of str, optional
         The specific columns to clean and impute. If a column is None, the function 
         targets all categorical columns.
     sign : str, default "?"
         The specific string used in the dataset to denote missing values.
-    n_neighbors : int, default 5
-        The number of similar neighbors.
 
+        
     Returns
     -------
     pd.DataFrame
-        A cleaned DataFrame, where the signs have been replaced by likely categories.
+        A cleaned DataFrame, where the signs have been replaced by the column mode.
 
     Raises
     ------
     TypeError
         If `data` is not a pandas DataFrame.
     ValueError
-        If `n_neighbors` is less than 1 or if the `sign` is not found 
-        in the specified columns.
+        If `sign` is not found in any of the targeted columns, or if a
+        targeted column contains only missing values.
     KeyError
         If a column in `columns` is missing from the DataFrame.
 
