@@ -18,7 +18,7 @@ This package aim to simplify the data wrangling for the Adult Census Income data
 
 - `set_dtype()`
   - sets the data types for each column in the dataset to reduce memory requirements
-- `cat_knn_impute()`
+- `cat_mode_impute()`
   - performs imputation of missing values
 - `clean_col_name()`
   - replace "." with "-" and make some names more meaningful
