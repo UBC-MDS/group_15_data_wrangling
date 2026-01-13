@@ -6,7 +6,7 @@ import pandas as pd
 def data() -> pd.DataFrame:
     """Fixture to load test data DataFrame from csv file."""
     
-    file_path = 'data_sample.csv'
+    file_path = 'tests/unit/data_sample.csv'
     try:
         df = pd.read_csv(file_path)
         return df
