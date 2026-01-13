@@ -15,7 +15,7 @@ def cat_knn_impute(data, columns=None, sign="?", n_neighbors=5):
     data : pd.DataFrame
         The raw input DataFrame (e.g., Adult Census Income data).
     columns : list of str
-        The specific columns to clean and impute. If None, the function 
+        The specific columns to clean and impute. If a column is None, the function 
         targets all categorical columns.
     sign : str, default "?"
         The specific string used in the dataset to denote missing values.
@@ -38,3 +38,4 @@ def cat_knn_impute(data, columns=None, sign="?", n_neighbors=5):
         If a column in `columns` is missing from the DataFrame.
 
     """
+
