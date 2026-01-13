@@ -1,6 +1,3 @@
-"""
-Docstring for tests.unit.test_clean_col_names
-"""
 import pytest
 import pandas as pd
 from group_15_data_wrangling.clean_col_name import clean_col_name
