@@ -36,7 +36,7 @@ classifiers = [
 # TODO: add keywords
 keywords = []
 # TODO: add dependencies
-dependencies = []
+dependencies = [pandas]
 
 [project.urls]
 Homepage = "https://github.com/meirikson/group_15_data_wrangling"
