@@ -28,4 +28,10 @@ def clean_col_name(df: pd.DataFrame) -> pd.DataFrame:
     >>> clean_col_name(df)
 
     """
-    return None
+    if not isinstance(df, pd.DataFrame):
+        raise TypeError("Wrong Input: should be a dataframe.")
+    
+    out = df.copy()
+    out.columns = out.columns.str.replace(".", "_", regex=False)
+    out = out.rename(columns={"fnlwgt": "final_weight"})
+    return out
