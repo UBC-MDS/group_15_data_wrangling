@@ -51,11 +51,13 @@ def cat_mode_impute(data, columns=None, sign="?"):
         if missing:
             raise KeyError(f"Column(s) not found in DataFrame: {missing}")
         target_cols = columns
+        if not any((data[c] == sign).any() for c in target_cols):
+            raise ValueError("`sign` was not found in any of the targeted columns.")
     else:
         target_cols = [c for c in data.columns if (data[c] == sign).any()]
 
     if len(target_cols) == 0:
-        raise ValueError("`sign` was not found in any column of the DataFrame.")
+        raise ValueError("`sign` was not found in any of the targeted columns.")
 
     df= data.copy()
 
