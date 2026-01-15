@@ -44,4 +44,35 @@ def set_dtype(df: pd.DataFrame) -> pd.DataFrame:
 
     """
 
-    return None
+    if not isinstance(df, pd.DataFrame):
+        raise TypeError(f"Expected input to be pandas DataFrame, got {type(df)}")
+    
+    expected_columns = {
+        'occupation', 'capital.loss', 'race', 'age', 'education', 
+        'native.country', 'marital.status', 'income', 'capital.gain', 
+        'workclass', 'fnlwgt', 'relationship', 'sex', 'hours.per.week', 
+        'education.num'
+    }
+    actual_columns = set(df.columns)
+    if not (actual_columns == expected_columns):
+        raise ValueError(f"Expected input DataFrame to have these columns: {expected_columns}, got: {actual_columns}")
+
+    df = df.astype({
+        "age": "int8",
+        "workclass": "category",
+        "fnlwgt": "int32",
+        "education": "category",
+        "education.num": "int8",
+        "marital.status": "category",
+        "occupation": "category",
+        "relationship": "category",
+        "race": "category",
+        "sex": "category",
+        "capital.gain": "int32",
+        "capital.loss": "int32",
+        "hours.per.week": "int8",
+        "native.country": "category",
+        "income": "category",
+    })
+
+    return df
