@@ -28,7 +28,7 @@ def encode_income_binary(df: pd.DataFrame, target_column: str = "income") -> pd.
     Returns
     -------
     pd.DataFrame
-        A dataframe with an additional binary income column.
+        A dataframe with an additional column called income_binary.
 
     Examples
     --------
