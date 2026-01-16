@@ -33,6 +33,15 @@ def encode_income_binary(df: pd.DataFrame, target_column: str = "income") -> pd.
     Examples
     --------
     - encode_income_binary(adult_census_df)
-"""
+    """
+    
+    if not isinstance(df, pd.DataFrame):
+        raise TypeError(f"Expected input to be pandas DataFrame, got {type(df)}")
+    
+    if target_column not in df.columns:
+        raise ValueError(f"The Data Frame that was inputted does not contain {target_column}")
+    
+    encoded_vals={"<=50K": 0, ">50K": 1}
+    df["income_binary"] = df[target_column].map(encoded_vals)
 
-return None
+    return df
