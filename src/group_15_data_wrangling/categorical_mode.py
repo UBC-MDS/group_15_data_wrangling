@@ -63,9 +63,6 @@ def cat_mode_impute(data, columns=None, sign="?"):
 
     for c in target_cols:
         mask = df[c] == sign
-        if not mask.any():
-            continue
-
         observed = df.loc[~mask, c].dropna()
         if observed.empty:
             raise ValueError(f"Column '{c}' cannot be imputed because all values are missing.")
