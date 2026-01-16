@@ -7,7 +7,7 @@ varibale is currently categorical, so encoding this column into a binary represe
 """
 import pandas as pd
 
-def encode_income_binary(df: pd.DataFrame, target_column: str = "income", output_column: str = "income_binary") -> pd.DataFrame:
+def encode_income_binary(df: pd.DataFrame, target_column: str = "income") -> pd.DataFrame:
     """
     Encode the income column of the Adult Census Income dataset into a binary target.
 
@@ -15,15 +15,15 @@ def encode_income_binary(df: pd.DataFrame, target_column: str = "income", output
         - '<=50K' is encoded as 0
         - '>50K' is encoded as 1
     
+    A new column named 'income_binary' is added to the returned DataFrame.
+    
     Parameters
     ----------
-    df : pd.Dataframe
-        The adult census income dataset found here: 
+    df : pd.DataFrame
+        The adult census income dataset found here in csv form: 
         https://www.kaggle.com/datasets/uciml/adult-census-income
     target_column : str, default 'income'
         Name of the income column to encode.
-    output_column : str, default 'income_binary'
-        Name of the new binary target column to create.
 
     Returns
     -------
@@ -33,7 +33,6 @@ def encode_income_binary(df: pd.DataFrame, target_column: str = "income", output
     Examples
     --------
     - encode_income_binary(adult_census_df)
-    - encode_income_binary(adult_census_df, output_column= "income_encoded")
 """
 
 return None
