@@ -42,6 +42,7 @@ def encode_income_binary(df: pd.DataFrame, target_column: str = "income") -> pd.
         raise ValueError(f"The Data Frame that was inputted does not contain {target_column}")
     
     encoded_vals={"<=50K": 0, ">50K": 1}
-    df["income_binary"] = df[target_column].map(encoded_vals)
+    output=df.copy()
+    output["income_binary"] = output[target_column].map(encoded_vals)
 
-    return df
+    return output
