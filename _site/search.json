@@ -48,8 +48,9 @@
     "href": "reference/encode_income.html",
     "title": "encode_income",
     "section": "",
-    "text": "encode_income\nA module that encodes the target income column\nThe goal is to convert the target variable into a binary numeric representation. Our target varibale is currently categorical, so encoding this column into a binary representation (0’s and 1’s) will allow for our dataset to be used in machine learning models.\n\n\n\n\n\nName\nDescription\n\n\n\n\nencode_income_binary\nEncode the income column of the Adult Census Income dataset into a binary target.\n\n\n\n\n\nencode_income.encode_income_binary(df, target_column='income')\nEncode the income column of the Adult Census Income dataset into a binary target.\nThis function creates a binary target column where: - ‘&lt;=50K’ is encoded as 0 - ‘&gt;50K’ is encoded as 1\nA new column named ‘income_binary’ is added to the returned DataFrame.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nThe adult census income dataset found here in csv form: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\ntarget_column\nstr\nName of the income column to encode.\n'income'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA dataframe with an additional column called income_binary.\n\n\n\n\n\n\n\nencode_income_binary(adult_census_df)",
+    "text": "encode_income\nA module that encodes the target income column.\nThe goal is to convert the target variable into a binary numeric representation. Our target varibale is currently categorical, so encoding this column into a binary representation (0’s and 1’s) will allow for our dataset to be used in machine learning models.\n\n\n\n\n\nName\nDescription\n\n\n\n\nencode_income_binary\nEncode the income column of the Adult Census Income dataset into a binary target.\n\n\n\n\n\nencode_income.encode_income_binary(df, target_column='income')\nEncode the income column of the Adult Census Income dataset into a binary target.\nThis function creates a binary target column where: - ‘&lt;=50K’ is encoded as 0 - ‘&gt;50K’ is encoded as 1\nA new column named ‘income_binary’ is added to the returned DataFrame.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nThe adult census income dataset found here in csv form: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\ntarget_column\nstr\nName of the income column to encode.\n'income'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA dataframe with an additional column called income_binary.\n\n\n\n\n\n\n\nencode_income_binary(adult_census_df)",
     "crumbs": [
+      "“Reference”",
       "Functions",
       "encode_income"
     ]
@@ -61,6 +62,7 @@
     "section": "",
     "text": "Name\nDescription\n\n\n\n\nencode_income_binary\nEncode the income column of the Adult Census Income dataset into a binary target.\n\n\n\n\n\nencode_income.encode_income_binary(df, target_column='income')\nEncode the income column of the Adult Census Income dataset into a binary target.\nThis function creates a binary target column where: - ‘&lt;=50K’ is encoded as 0 - ‘&gt;50K’ is encoded as 1\nA new column named ‘income_binary’ is added to the returned DataFrame.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nThe adult census income dataset found here in csv form: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\ntarget_column\nstr\nName of the income column to encode.\n'income'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA dataframe with an additional column called income_binary.\n\n\n\n\n\n\n\nencode_income_binary(adult_census_df)",
     "crumbs": [
+      "“Reference”",
       "Functions",
       "encode_income"
     ]
@@ -225,8 +227,9 @@
     "href": "reference/index.html",
     "title": "Function reference",
     "section": "",
-    "text": "Functions to inspect docstrings.\n\n\n\ncategorical_mode\nA module that performing cleaning and mode-based imputation for categorical data.\n\n\nclean_col_name\nA module that cleans column names for the Adult Census Income dataset.\n\n\nencode_income\nA module that encodes the target income column\n\n\nset_dtypes\nA module that sets the data type for the Adult Census Income dataset.",
+    "text": "Functions to inspect docstrings.\n\n\n\ncategorical_mode\nA module that performing cleaning and mode-based imputation for categorical data.\n\n\nclean_col_name\nA module that cleans column names for the Adult Census Income dataset.\n\n\nencode_income\nA module that encodes the target income column.\n\n\nset_dtypes\nA module that sets the data type for the Adult Census Income dataset.",
     "crumbs": [
+      "Reference",
       "Function reference"
     ]
   },
@@ -235,9 +238,52 @@
     "href": "reference/index.html#functions",
     "title": "Function reference",
     "section": "",
-    "text": "Functions to inspect docstrings.\n\n\n\ncategorical_mode\nA module that performing cleaning and mode-based imputation for categorical data.\n\n\nclean_col_name\nA module that cleans column names for the Adult Census Income dataset.\n\n\nencode_income\nA module that encodes the target income column\n\n\nset_dtypes\nA module that sets the data type for the Adult Census Income dataset.",
+    "text": "Functions to inspect docstrings.\n\n\n\ncategorical_mode\nA module that performing cleaning and mode-based imputation for categorical data.\n\n\nclean_col_name\nA module that cleans column names for the Adult Census Income dataset.\n\n\nencode_income\nA module that encodes the target income column.\n\n\nset_dtypes\nA module that sets the data type for the Adult Census Income dataset.",
     "crumbs": [
+      "Reference",
       "Function reference"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to group_15_data_wrangling",
+    "section": "",
+    "text": "Package\n \n\n\nMeta\n\n\n\n\n\n\nThis package aim to simplify the data wrangling for the Adult Census Income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income. This will make it easier for someone who want to work with the data to quickly get the dataset in a clean format where they can then start analysis right away.\n\n\n\nset_dtype()\n\nsets the data types for each column in the dataset to reduce memory requirements\n\ncat_mode_impute()\n\nperforms imputation of missing values\n\nclean_col_name()\n\nreplace “.” with “-” and make some names more meaningful\n\nencode_income_binary()\n\nencode the target feature, income, as binary\n\n\n\n\n\nThere is an existant package called pyjanitor that has many useful data cleaning routines. These are general purpose and very powerful. Our package is much more focused on cleaning the specific adult census income dataset. In general pyjanitor is a much more useful package, but to tidy our specific dataset our functions will probably do the job with less effort.\npyjanitor: https://github.com/pyjanitor-devs/pyjanitor\n\n\n\n\nYou can install this package into your preferred Python environment using pip:\npip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple group_15_data_wrangling\nTo use group_15_data_wrangling in your code:\n&gt;&gt;&gt; import group_15_data_wrangling\n&gt;&gt;&gt; group_15_data_wrangling(census_df)"
+  },
+  {
+    "objectID": "index.html#package-summary",
+    "href": "index.html#package-summary",
+    "title": "Welcome to group_15_data_wrangling",
+    "section": "",
+    "text": "This package aim to simplify the data wrangling for the Adult Census Income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income. This will make it easier for someone who want to work with the data to quickly get the dataset in a clean format where they can then start analysis right away.\n\n\n\nset_dtype()\n\nsets the data types for each column in the dataset to reduce memory requirements\n\ncat_mode_impute()\n\nperforms imputation of missing values\n\nclean_col_name()\n\nreplace “.” with “-” and make some names more meaningful\n\nencode_income_binary()\n\nencode the target feature, income, as binary\n\n\n\n\n\nThere is an existant package called pyjanitor that has many useful data cleaning routines. These are general purpose and very powerful. Our package is much more focused on cleaning the specific adult census income dataset. In general pyjanitor is a much more useful package, but to tidy our specific dataset our functions will probably do the job with less effort.\npyjanitor: https://github.com/pyjanitor-devs/pyjanitor"
+  },
+  {
+    "objectID": "index.html#get-started",
+    "href": "index.html#get-started",
+    "title": "Welcome to group_15_data_wrangling",
+    "section": "",
+    "text": "You can install this package into your preferred Python environment using pip:\npip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple group_15_data_wrangling\nTo use group_15_data_wrangling in your code:\n&gt;&gt;&gt; import group_15_data_wrangling\n&gt;&gt;&gt; group_15_data_wrangling(census_df)"
+  },
+  {
+    "objectID": "index.html#contributors",
+    "href": "index.html#contributors",
+    "title": "Welcome to group_15_data_wrangling",
+    "section": "",
+    "text": "Limor Winter\nShihan Xu\nZaki Aslam\nMichael Eirikson"
+  },
+  {
+    "objectID": "index.html#copyright",
+    "href": "index.html#copyright",
+    "title": "Welcome to group_15_data_wrangling",
+    "section": "Copyright",
+    "text": "Copyright\n\nCopyright © 2026 Michael Eirikson.\nFree software distributed under the MIT License."
+  },
+  {
+    "objectID": "index.html#contributing",
+    "href": "index.html#contributing",
+    "title": "Welcome to group_15_data_wrangling",
+    "section": "Contributing",
+    "text": "Contributing\n\nSetup development environment\nconda env create -f environment.yml\n\n\nInstall the package and development dependencies\npip install -e .[test,dev,docs]\n\n\nTo run tests\npytest --cov=src --cov-branch --cov-report=term-missing\n\n\nbuild documentation\nTo build documentation\nquartodoc build\nTo preview documentation\nquarto preview\n\n\ndeploy documentation"
   }
 ]
