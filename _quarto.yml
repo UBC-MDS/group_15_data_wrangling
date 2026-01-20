@@ -7,9 +7,9 @@ website:
     background: primary
     search: true
     left:
-      - text: “Home”
+      - text: Home
         href: index.qmd
-      - text: “Reference”
+      - text: Reference
         href: reference/index.qmd
 
 # tell quarto to read the generated sidebar
