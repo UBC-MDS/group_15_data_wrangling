@@ -31,17 +31,53 @@ There is an existant package called `pyjanitor` that has many useful data cleani
 You can install this package into your preferred Python environment using pip:
 
 ```bash
-pip install group_15_data_wrangling
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple group_15_data_wrangling
 ```
 
 To use group_15_data_wrangling in your code:
 
 ```python
 >>> import group_15_data_wrangling
->>> group_15_data_wrangling.hello_world()
+>>> group_15_data_wrangling(census_df)
 ```
 
-## Contributors
+### Documentation
+
+# DOCUMENTATION REPO LINK HERE
+
+## Contributing
+
+### Setup development environment
+
+`conda env create -f environment.yml`
+
+### Install the package and development dependencies
+
+`pip install -e .[test,dev,docs]`
+
+### To run tests
+
+`pytest --cov=src --cov-branch --cov-report=term-missing`
+
+### build documentation
+
+To build documentation
+
+`quartodoc build`
+
+To preview documentation
+
+`quarto preview`
+
+### deploy documentation
+
+# ADD STUFF HERE
+
+### Github Repo
+
+<https://github.com/UBC-MDS/group_15_data_wrangling>
+
+### Contributors
 
 - Limor Winter
 - Shihan Xu
