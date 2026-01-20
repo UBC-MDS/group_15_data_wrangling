@@ -8,5 +8,5 @@ Functions to inspect docstrings.
 | --- | --- |
 | [categorical_mode](categorical_mode.qmd#group_15_data_wrangling.categorical_mode) | A module that performing cleaning and mode-based imputation for categorical data. |
 | [clean_col_name](clean_col_name.qmd#group_15_data_wrangling.clean_col_name) | A module that cleans column names for the Adult Census Income dataset. |
-| [encode_income](encode_income.qmd#group_15_data_wrangling.encode_income) | A module that encodes the target income column |
+| [encode_income](encode_income.qmd#group_15_data_wrangling.encode_income) | A module that encodes the target income column. |
 | [set_dtypes](set_dtypes.qmd#group_15_data_wrangling.set_dtypes) | A module that sets the data type for the Adult Census Income dataset. |

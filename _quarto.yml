@@ -1,6 +1,17 @@
 project:
   type: website
 
+website:
+  title: ProjectX
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: “Home”
+        href: index.qmd
+      - text: “Reference”
+        href: reference/index.qmd
+
 # tell quarto to read the generated sidebar
 metadata-files:
   - reference/_sidebar.yml
@@ -20,6 +31,9 @@ quartodoc:
   css: reference/_styles-quartodoc.css
 
   sections:
+    # - title: Overview
+    #   contents:
+    #     - README.md
     - title: Functions
       desc: Functions to inspect docstrings.
       contents:
