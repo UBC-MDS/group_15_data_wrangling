@@ -1,0 +1,42 @@
+# clean_col_name { #group_15_data_wrangling.clean_col_name }
+
+`clean_col_name`
+
+A module that cleans column names for the Adult Census Income dataset.
+
+The goal is to standardize column name, make it meaningful and improve readability.
+
+## Functions
+
+| Name | Description |
+| --- | --- |
+| [clean_col_name](#group_15_data_wrangling.clean_col_name.clean_col_name) | Rename columns for consistency and readability and return the new dataframe. |
+
+### clean_col_name { #group_15_data_wrangling.clean_col_name.clean_col_name }
+
+```python
+clean_col_name.clean_col_name(df)
+```
+
+Rename columns for consistency and readability and return the new dataframe.
+
+- Replace '.' with '_'
+- Rename 'fnlwgt' to a more meaningful name
+
+#### Parameters {.doc-section .doc-section-parameters}
+
+| Name   | Type         | Description                                          | Default    |
+|--------|--------------|------------------------------------------------------|------------|
+| df     | pd.DataFrame | Dataframe including the Adult Census Income dataset. | _required_ |
+
+#### Returns {.doc-section .doc-section-returns}
+
+| Name   | Type         | Description                                      |
+|--------|--------------|--------------------------------------------------|
+| df     | pd.DataFrame | The dataframe with new, meaningful column names. |
+
+#### Examples {.doc-section .doc-section-examples}
+
+```python
+>>> clean_col_name(df)
+```

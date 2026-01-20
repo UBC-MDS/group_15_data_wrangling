@@ -13,19 +13,19 @@ format:
 
 quartodoc:
   # the name used to import the package you want to create reference docs for
-  package: quartodoc
+  package: group_15_data_wrangling
 
   # write sidebar and style data
   sidebar: reference/_sidebar.yml
   css: reference/_styles-quartodoc.css
 
   sections:
-    - title: Some functions
+    - title: Functions
       desc: Functions to inspect docstrings.
       contents:
         # the functions being documented in the package.
         # you can refer to anything: class methods, modules, etc..
         - categorical_mode
-        - clean_col_names
+        - clean_col_name
         - encode_income
-        - set_dtype
+        - set_dtypes
