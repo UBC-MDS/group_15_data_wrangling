@@ -51,19 +51,17 @@ Download = "https://pypi.org/project/group_15_data_wrangling/#files"
 # The groups below should be in the [development-groups] table
 # They are here now because hatch hasn't released support for them but plans to
 # in Mid November 2025.
+
 dev = [
     "hatch",
-    "pre-commit",
 ]
 
 docs = [
     "quartodoc",
 ]
 
-build = [
-    "pip-audit",
-    "twine",
-]
+build = [ ]
+
 tests = [
     "pytest",
     "pytest-cov",
