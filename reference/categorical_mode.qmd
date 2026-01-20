@@ -2,7 +2,7 @@
 
 `categorical_mode`
 
-
+A module that performing cleaning and mode-based imputation for categorical data.
 
 ## Functions
 
