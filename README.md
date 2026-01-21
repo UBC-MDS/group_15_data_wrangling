@@ -83,11 +83,7 @@ To force update documentation website from the current branch run (probably don'
 quarto publish gh-pages
 ```
 
-### Github Repo
-
-<https://github.com/UBC-MDS/group_15_data_wrangling>
-
-### Contributors
+## Contributors
 
 - Limor Winter
 - Shihan Xu
