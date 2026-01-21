@@ -43,7 +43,7 @@ To use group_15_data_wrangling in your code:
 
 ### Documentation
 
-# DOCUMENTATION REPO LINK HERE
+[Documentation can be found here](https://ubc-mds.github.io/group_15_data_wrangling/)
 
 ## Contributing
 

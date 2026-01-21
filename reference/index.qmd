@@ -7,6 +7,6 @@ Functions to inspect docstrings.
 | | |
 | --- | --- |
 | [cat_mode_impute](cat_mode_impute.qmd#group_15_data_wrangling.cat_mode_impute) | Performs cleaning and mode-based imputation for categorical data. |
-| [clean_col_name](clean_col_name.qmd#group_15_data_wrangling.clean_col_name) | A module that cleans column names for the Adult Census Income dataset. |
+| [clean_col_name](clean_col_name.qmd#group_15_data_wrangling.clean_col_name) | Rename columns for consistency and readability and return the new dataframe. |
 | [encode_income_binary](encode_income_binary.qmd#group_15_data_wrangling.encode_income_binary) | Encode the income column of the Adult Census Income dataset into a binary target. |
 | [set_dtype](set_dtype.qmd#group_15_data_wrangling.set_dtype) | Update the data types for each columns to increase efficiency. |
