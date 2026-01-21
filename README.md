@@ -34,11 +34,14 @@ You can install this package into your preferred Python environment using pip:
 pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple group_15_data_wrangling
 ```
 
-To use group_15_data_wrangling in your code:
+To use `group_15_data_wrangling` in your code:
 
 ```python
->>> import group_15_data_wrangling
->>> group_15_data_wrangling(census_df)
+>>> from group_15_data_wrangling import cat_mode_impute, clean_col_name, encode_income_binary, set_dtype
+>>> census_df_no_nan = cat_mode_impute(census_df)
+>>> census_df_clean_names = clean_col_name(census_df)
+>>> census_df_binary_income = encode_income_binary(census_df)
+>>> census_df_consise_dtypes = set_dtype(census_df)
 ```
 
 ### Documentation
@@ -47,31 +50,38 @@ To use group_15_data_wrangling in your code:
 
 ## Contributing
 
-### Setup development environment
+### Github repo
 
-`conda env create -f environment.yml`
+<https://github.com/UBC-MDS/group_15_data_wrangling>
 
-### Install the package and development dependencies
+### Get started contributing
 
-`pip install -e .[test,dev,docs]`
+```bash
+git clone <repo> # clone group_15_data_wrangling repo
+conda env create -f environment.yml # setup dev environment
+pip install -e .[test,dev,docs] # install package and development dependencies
+```
 
-### To run tests
+### Run tests
 
-`pytest --cov=src --cov-branch --cov-report=term-missing`
+```bash
+pytest --cov=src --cov-branch --cov-report=term-missing
+```
 
-### build documentation
+### build, preview and deploy documentation
 
-To build documentation
+```bash
+quartodoc build
+quarto preview
+```
 
-`quartodoc build`
+Documentation website update automatically on push to `main`.
 
-To preview documentation
+To force update documentation website from the current branch run (probably don't do this).
 
-`quarto preview`
-
-### deploy documentation
-
-# ADD STUFF HERE
+```bash
+quarto publish gh-pages
+```
 
 ### Github Repo
 
