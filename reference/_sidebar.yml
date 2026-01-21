@@ -6,7 +6,7 @@ website:
       - reference/cat_mode_impute.qmd
       - reference/clean_col_name.qmd
       - reference/encode_income_binary.qmd
-      - reference/set_dtypes.qmd
+      - reference/set_dtype.qmd
       section: Functions
     id: reference
   - id: dummy-sidebar

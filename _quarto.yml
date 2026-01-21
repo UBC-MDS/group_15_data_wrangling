@@ -42,4 +42,4 @@ quartodoc:
         - cat_mode_impute
         - clean_col_name
         - encode_income_binary
-        - set_dtypes
+        - set_dtype
