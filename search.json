@@ -1,0 +1,364 @@
+[
+  {
+    "objectID": "reference/encode_income_binary.html",
+    "href": "reference/encode_income_binary.html",
+    "title": "encode_income_binary",
+    "section": "",
+    "text": "encode_income_binary(df, target_column='income')\nEncode the income column of the Adult Census Income dataset into a binary target.\nThis function creates a binary target column where: - ‘&lt;=50K’ is encoded as 0 - ‘&gt;50K’ is encoded as 1\nA new column named ‘income_binary’ is added to the returned DataFrame.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nThe adult census income dataset found here in csv form: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\ntarget_column\nstr\nName of the income column to encode.\n'income'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA dataframe with an additional column called income_binary.\n\n\n\n\n\n\n\nencode_income_binary(adult_census_df)",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "encode_income_binary"
+    ]
+  },
+  {
+    "objectID": "reference/encode_income_binary.html#parameters",
+    "href": "reference/encode_income_binary.html#parameters",
+    "title": "encode_income_binary",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nThe adult census income dataset found here in csv form: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\ntarget_column\nstr\nName of the income column to encode.\n'income'",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "encode_income_binary"
+    ]
+  },
+  {
+    "objectID": "reference/encode_income_binary.html#returns",
+    "href": "reference/encode_income_binary.html#returns",
+    "title": "encode_income_binary",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA dataframe with an additional column called income_binary.",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "encode_income_binary"
+    ]
+  },
+  {
+    "objectID": "reference/encode_income_binary.html#examples",
+    "href": "reference/encode_income_binary.html#examples",
+    "title": "encode_income_binary",
+    "section": "",
+    "text": "encode_income_binary(adult_census_df)",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "encode_income_binary"
+    ]
+  },
+  {
+    "objectID": "reference/clean_col_name.html",
+    "href": "reference/clean_col_name.html",
+    "title": "clean_col_name",
+    "section": "",
+    "text": "clean_col_name\nA module that cleans column names for the Adult Census Income dataset.\nThe goal is to standardize column name, make it meaningful and improve readability.\n\n\n\n\n\nName\nDescription\n\n\n\n\nclean_col_name\nRename columns for consistency and readability and return the new dataframe.\n\n\n\n\n\nclean_col_name.clean_col_name(df)\nRename columns for consistency and readability and return the new dataframe.\n\nReplace ‘.’ with ’_’\nRename ‘fnlwgt’ to a more meaningful name\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nDataframe including the Adult Census Income dataset.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\ndf\npd.DataFrame\nThe dataframe with new, meaningful column names.\n\n\n\n\n\n\n&gt;&gt;&gt; clean_col_name(df)",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "clean_col_name"
+    ]
+  },
+  {
+    "objectID": "reference/clean_col_name.html#functions",
+    "href": "reference/clean_col_name.html#functions",
+    "title": "clean_col_name",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\nclean_col_name\nRename columns for consistency and readability and return the new dataframe.\n\n\n\n\n\nclean_col_name.clean_col_name(df)\nRename columns for consistency and readability and return the new dataframe.\n\nReplace ‘.’ with ’_’\nRename ‘fnlwgt’ to a more meaningful name\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nDataframe including the Adult Census Income dataset.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\ndf\npd.DataFrame\nThe dataframe with new, meaningful column names.\n\n\n\n\n\n\n&gt;&gt;&gt; clean_col_name(df)",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "clean_col_name"
+    ]
+  },
+  {
+    "objectID": "reference/set_dtypes.html",
+    "href": "reference/set_dtypes.html",
+    "title": "set_dtypes",
+    "section": "",
+    "text": "set_dtypes\nA module that sets the data type for the Adult Census Income dataset.\nThe purpose of this is to increase memory and compute efficiency.\n\n\n\n\n\nName\nDescription\n\n\n\n\nset_dtype\nUpdate the data types for each columns to increase efficiency.\n\n\n\n\n\nset_dtypes.set_dtype(df)\nUpdate the data types for each columns to increase efficiency.\nSets the follow dtypes: age int8 workclass category fnlwgt int32 education category education.num int8 marital.status category occupation category relationship category race category sex category capital.gain int32 capital.loss int32 hours.per.week int8 native.country category income category\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.Dataframe\nThe adult census income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.Dataframe\nThe adult census imcome dataframe with updated data types.\n\n\n\n\n\n\n&gt;&gt;&gt; set_dtype(adult_census_df)",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "set_dtypes"
+    ]
+  },
+  {
+    "objectID": "reference/set_dtypes.html#functions",
+    "href": "reference/set_dtypes.html#functions",
+    "title": "set_dtypes",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\nset_dtype\nUpdate the data types for each columns to increase efficiency.\n\n\n\n\n\nset_dtypes.set_dtype(df)\nUpdate the data types for each columns to increase efficiency.\nSets the follow dtypes: age int8 workclass category fnlwgt int32 education category education.num int8 marital.status category occupation category relationship category race category sex category capital.gain int32 capital.loss int32 hours.per.week int8 native.country category income category\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.Dataframe\nThe adult census income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.Dataframe\nThe adult census imcome dataframe with updated data types.\n\n\n\n\n\n\n&gt;&gt;&gt; set_dtype(adult_census_df)",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "set_dtypes"
+    ]
+  },
+  {
+    "objectID": "reference/encode_income.html",
+    "href": "reference/encode_income.html",
+    "title": "encode_income",
+    "section": "",
+    "text": "encode_income\nA module that encodes the target income column.\nThe goal is to convert the target variable into a binary numeric representation. Our target varibale is currently categorical, so encoding this column into a binary representation (0’s and 1’s) will allow for our dataset to be used in machine learning models.\n\n\n\n\n\nName\nDescription\n\n\n\n\nencode_income_binary\nEncode the income column of the Adult Census Income dataset into a binary target.\n\n\n\n\n\nencode_income.encode_income_binary(df, target_column='income')\nEncode the income column of the Adult Census Income dataset into a binary target.\nThis function creates a binary target column where: - ‘&lt;=50K’ is encoded as 0 - ‘&gt;50K’ is encoded as 1\nA new column named ‘income_binary’ is added to the returned DataFrame.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nThe adult census income dataset found here in csv form: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\ntarget_column\nstr\nName of the income column to encode.\n'income'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA dataframe with an additional column called income_binary.\n\n\n\n\n\n\n\nencode_income_binary(adult_census_df)"
+  },
+  {
+    "objectID": "reference/encode_income.html#functions",
+    "href": "reference/encode_income.html#functions",
+    "title": "encode_income",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\nencode_income_binary\nEncode the income column of the Adult Census Income dataset into a binary target.\n\n\n\n\n\nencode_income.encode_income_binary(df, target_column='income')\nEncode the income column of the Adult Census Income dataset into a binary target.\nThis function creates a binary target column where: - ‘&lt;=50K’ is encoded as 0 - ‘&gt;50K’ is encoded as 1\nA new column named ‘income_binary’ is added to the returned DataFrame.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nThe adult census income dataset found here in csv form: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\ntarget_column\nstr\nName of the income column to encode.\n'income'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA dataframe with an additional column called income_binary.\n\n\n\n\n\n\n\nencode_income_binary(adult_census_df)"
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing to group_15_data_wrangling",
+    "section": "",
+    "text": "Contributions of all kinds are welcome here, and they are greatly appreciated! Every little bit helps, and credit will always be given.\nThis CONTRIBUTING.md was adapted from the default Python minimal setup template.\n\n\nYou can contribute in many ways, for example:\n\nReport bugs\nFix Bugs\nImplement Features\nWrite Documentation\nSubmit Feedback\n\n\n\nReport bugs at https://github.com/meirikson/group_15_data_wrangling/issues.\nIf you are reporting a bug, please follow the template guidelines. The more detailed your report, the easier and thus faster we can help you.\n\n\n\nLook through the GitHub issues for bugs. Anything labelled with bug and help wanted is open to whoever wants to implement it. When you decide to work on such an issue, please assign yourself to it and add a comment that you’ll be working on that, too. If you see another issue without the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nLook through the GitHub issues for features. Anything labelled with enhancement and help wanted is open to whoever wants to implement it. As for fixing bugs, please assign yourself to the issue and add a comment that you’ll be working on that, too. If another enhancement catches your fancy, but it doesn’t have the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\ngroup_15_data_wrangling could always use more documentation, whether as part of the official documentation, in docstrings, or even on the web in blog posts, articles, and such. Just open an issue to let us know what you will be working on so that we can provide you with guidance.\n\n\n\nThe best way to send feedback is to file an issue at https://github.com/meirikson/group_15_data_wrangling/issues. If your feedback fits the format of one of the issue templates, please use that. Remember that this is a volunteer-driven project and everybody has limited time.\n\n\n\n\nFor this project, our team follows the GitHub Flow:\n\nCreate a branch from dev-milestone-n for each feature, function, or fix.\n\nBranch naming convention: feature/&lt;function_name&gt; or fix/&lt;issue_name&gt;\n\nWork on your branch locally. Make commits regularly with meaningful messages.\nPush your branch to GitHub:\ngit push -u origin &lt;branch_name&gt;\nCreate a pull request (PR) to merge your branch into dev-milestone-n.\n\nMake sure to link the relevant issue if there is one.\n\n\nThe pull request should include tests.\nIf the pull request adds functionality, the docs should be updated. Put your new functionality into a function with a docstring.\nYour pull request will automatically be checked by the full test suite. It needs to pass all of them before it can be considered for merging.\n\nAnother team member reviews the PR and approves it.\n\nProvide constructive feedback if changes are needed.\n\nOnce approved, merge the PR into dev-milestone-n.\n\nUse “Merge pull request”.\n\nDelete the branch after merging to keep the repository clean.\n\nThis avoids clutter in the repository and keeps dev-milestone-n organized."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#example-contributions",
+    "href": "CONTRIBUTING.html#example-contributions",
+    "title": "Contributing to group_15_data_wrangling",
+    "section": "",
+    "text": "You can contribute in many ways, for example:\n\nReport bugs\nFix Bugs\nImplement Features\nWrite Documentation\nSubmit Feedback\n\n\n\nReport bugs at https://github.com/meirikson/group_15_data_wrangling/issues.\nIf you are reporting a bug, please follow the template guidelines. The more detailed your report, the easier and thus faster we can help you.\n\n\n\nLook through the GitHub issues for bugs. Anything labelled with bug and help wanted is open to whoever wants to implement it. When you decide to work on such an issue, please assign yourself to it and add a comment that you’ll be working on that, too. If you see another issue without the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nLook through the GitHub issues for features. Anything labelled with enhancement and help wanted is open to whoever wants to implement it. As for fixing bugs, please assign yourself to the issue and add a comment that you’ll be working on that, too. If another enhancement catches your fancy, but it doesn’t have the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\ngroup_15_data_wrangling could always use more documentation, whether as part of the official documentation, in docstrings, or even on the web in blog posts, articles, and such. Just open an issue to let us know what you will be working on so that we can provide you with guidance.\n\n\n\nThe best way to send feedback is to file an issue at https://github.com/meirikson/group_15_data_wrangling/issues. If your feedback fits the format of one of the issue templates, please use that. Remember that this is a volunteer-driven project and everybody has limited time."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#github-workflow-for-team-contributions",
+    "href": "CONTRIBUTING.html#github-workflow-for-team-contributions",
+    "title": "Contributing to group_15_data_wrangling",
+    "section": "",
+    "text": "For this project, our team follows the GitHub Flow:\n\nCreate a branch from dev-milestone-n for each feature, function, or fix.\n\nBranch naming convention: feature/&lt;function_name&gt; or fix/&lt;issue_name&gt;\n\nWork on your branch locally. Make commits regularly with meaningful messages.\nPush your branch to GitHub:\ngit push -u origin &lt;branch_name&gt;\nCreate a pull request (PR) to merge your branch into dev-milestone-n.\n\nMake sure to link the relevant issue if there is one.\n\n\nThe pull request should include tests.\nIf the pull request adds functionality, the docs should be updated. Put your new functionality into a function with a docstring.\nYour pull request will automatically be checked by the full test suite. It needs to pass all of them before it can be considered for merging.\n\nAnother team member reviews the PR and approves it.\n\nProvide constructive feedback if changes are needed.\n\nOnce approved, merge the PR into dev-milestone-n.\n\nUse “Merge pull request”.\n\nDelete the branch after merging to keep the repository clean.\n\nThis avoids clutter in the repository and keeps dev-milestone-n organized."
+  },
+  {
+    "objectID": "docs/index.html",
+    "href": "docs/index.html",
+    "title": "Welcome to group_15_data_wrangling’s Documentation ’",
+    "section": "",
+    "text": ":maxdepth: 2 :hidden: :caption: Contents:\nHome \n\nThis is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.\n:::{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left\nLearn more about myst in our pyOpenSci packaging guide.\n:::\nMyst is a version of markdown that has more formatting flexibility. This is what a sphinx directive looks like using myst markdown formatting:\n:::{toctree}\n:maxdepth: 2\n:caption: Contents:\n:::\nIf you see syntax like the syntax below, you are looking at rst.\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n\n\n\nCopyright © 2026 Michael Eirikson.\nFree software distributed under the MIT License."
+  },
+  {
+    "objectID": "docs/index.html#overview",
+    "href": "docs/index.html#overview",
+    "title": "Welcome to group_15_data_wrangling’s Documentation ’",
+    "section": "",
+    "text": ":maxdepth: 2 :hidden: :caption: Contents:\nHome \n\nThis is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.\n:::{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left\nLearn more about myst in our pyOpenSci packaging guide.\n:::\nMyst is a version of markdown that has more formatting flexibility. This is what a sphinx directive looks like using myst markdown formatting:\n:::{toctree}\n:maxdepth: 2\n:caption: Contents:\n:::\nIf you see syntax like the syntax below, you are looking at rst.\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:"
+  },
+  {
+    "objectID": "docs/index.html#copyright",
+    "href": "docs/index.html#copyright",
+    "title": "Welcome to group_15_data_wrangling’s Documentation ’",
+    "section": "",
+    "text": "Copyright © 2026 Michael Eirikson.\nFree software distributed under the MIT License."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html",
+    "href": "CODE_OF_CONDUCT.html",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.\nWe pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.\n\n\n\nExamples of behavior that contributes to a positive environment for our community include:\n\nDemonstrating empathy and kindness toward other people\nBeing respectful of differing opinions, viewpoints, and experiences\nGiving and gracefully accepting constructive feedback\nAccepting responsibility and apologizing to those affected by our mistakes, and learning from the experience\nFocusing on what is best not just for us as individuals, but for the overall community\n\nExamples of unacceptable behavior include:\n\nThe use of sexualized language or imagery, and sexual attention or advances of any kind\nTrolling, insulting or derogatory comments, and personal or political attacks\nPublic or private harassment\nPublishing others’ private information, such as a physical or email address, without their explicit permission\nOther conduct which could reasonably be considered inappropriate in a professional setting\n\n\n\n\nCommunity leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.\nCommunity leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.\n\n\n\nThis Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.\n\n\n\nInstances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at zaki2233@student.ubc.ca. All complaints will be reviewed and investigated promptly and fairly.\nAll community leaders are obligated to respect the privacy and security of the reporter of any incident.\n\n\n\nCommunity leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:\n\n\nCommunity Impact: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.\nConsequence: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.\n\n\n\nCommunity Impact: A violation through a single incident or series of actions.\nConsequence: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.\n\n\n\nCommunity Impact: A serious violation of community standards, including sustained inappropriate behavior.\nConsequence: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.\n\n\n\nCommunity Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.\nConsequence: A permanent ban from any sort of public interaction within the community.\n\n\n\n\nThis Code of Conduct is adapted from the Contributor Covenant, version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#our-pledge",
+    "href": "CODE_OF_CONDUCT.html#our-pledge",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.\nWe pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#our-standards",
+    "href": "CODE_OF_CONDUCT.html#our-standards",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "Examples of behavior that contributes to a positive environment for our community include:\n\nDemonstrating empathy and kindness toward other people\nBeing respectful of differing opinions, viewpoints, and experiences\nGiving and gracefully accepting constructive feedback\nAccepting responsibility and apologizing to those affected by our mistakes, and learning from the experience\nFocusing on what is best not just for us as individuals, but for the overall community\n\nExamples of unacceptable behavior include:\n\nThe use of sexualized language or imagery, and sexual attention or advances of any kind\nTrolling, insulting or derogatory comments, and personal or political attacks\nPublic or private harassment\nPublishing others’ private information, such as a physical or email address, without their explicit permission\nOther conduct which could reasonably be considered inappropriate in a professional setting"
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#enforcement-responsibilities",
+    "href": "CODE_OF_CONDUCT.html#enforcement-responsibilities",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.\nCommunity leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#scope",
+    "href": "CODE_OF_CONDUCT.html#scope",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#enforcement",
+    "href": "CODE_OF_CONDUCT.html#enforcement",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at zaki2233@student.ubc.ca. All complaints will be reviewed and investigated promptly and fairly.\nAll community leaders are obligated to respect the privacy and security of the reporter of any incident."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#enforcement-guidelines",
+    "href": "CODE_OF_CONDUCT.html#enforcement-guidelines",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:\n\n\nCommunity Impact: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.\nConsequence: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.\n\n\n\nCommunity Impact: A violation through a single incident or series of actions.\nConsequence: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.\n\n\n\nCommunity Impact: A serious violation of community standards, including sustained inappropriate behavior.\nConsequence: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.\n\n\n\nCommunity Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.\nConsequence: A permanent ban from any sort of public interaction within the community."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#attribution",
+    "href": "CODE_OF_CONDUCT.html#attribution",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "This Code of Conduct is adapted from the Contributor Covenant, version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations."
+  },
+  {
+    "objectID": "CHANGELOG.html",
+    "href": "CHANGELOG.html",
+    "title": "Changelog",
+    "section": "",
+    "text": "All notable changes to this project will be documented in this file.\nThe format is based on Keep a Changelog, and this project adheres to Semantic Versioning.\n\n\n\nUpcoming features and fixes\n\n\n\n\n\nFirst release"
+  },
+  {
+    "objectID": "CHANGELOG.html#unreleased",
+    "href": "CHANGELOG.html#unreleased",
+    "title": "Changelog",
+    "section": "",
+    "text": "Upcoming features and fixes"
+  },
+  {
+    "objectID": "CHANGELOG.html#section",
+    "href": "CHANGELOG.html#section",
+    "title": "Changelog",
+    "section": "",
+    "text": "First release"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to group_15_data_wrangling",
+    "section": "",
+    "text": "Package\n \n\n\nMeta\n\n\n\n\n\n\nThis package aim to simplify the data wrangling for the Adult Census Income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income. This will make it easier for someone who want to work with the data to quickly get the dataset in a clean format where they can then start analysis right away.\n\n\n\nset_dtype()\n\nsets the data types for each column in the dataset to reduce memory requirements\n\ncat_mode_impute()\n\nperforms imputation of missing values\n\nclean_col_name()\n\nreplace “.” with “-” and make some names more meaningful\n\nencode_income_binary()\n\nencode the target feature, income, as binary\n\n\n\n\n\nThere is an existant package called pyjanitor that has many useful data cleaning routines. These are general purpose and very powerful. Our package is much more focused on cleaning the specific adult census income dataset. In general pyjanitor is a much more useful package, but to tidy our specific dataset our functions will probably do the job with less effort.\npyjanitor: https://github.com/pyjanitor-devs/pyjanitor\n\n\n\n\nYou can install this package into your preferred Python environment using pip:\npip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple group_15_data_wrangling\nTo use group_15_data_wrangling in your code:\n&gt;&gt;&gt; import group_15_data_wrangling\n&gt;&gt;&gt; group_15_data_wrangling(census_df)"
+  },
+  {
+    "objectID": "index.html#package-summary",
+    "href": "index.html#package-summary",
+    "title": "Welcome to group_15_data_wrangling",
+    "section": "",
+    "text": "This package aim to simplify the data wrangling for the Adult Census Income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income. This will make it easier for someone who want to work with the data to quickly get the dataset in a clean format where they can then start analysis right away.\n\n\n\nset_dtype()\n\nsets the data types for each column in the dataset to reduce memory requirements\n\ncat_mode_impute()\n\nperforms imputation of missing values\n\nclean_col_name()\n\nreplace “.” with “-” and make some names more meaningful\n\nencode_income_binary()\n\nencode the target feature, income, as binary\n\n\n\n\n\nThere is an existant package called pyjanitor that has many useful data cleaning routines. These are general purpose and very powerful. Our package is much more focused on cleaning the specific adult census income dataset. In general pyjanitor is a much more useful package, but to tidy our specific dataset our functions will probably do the job with less effort.\npyjanitor: https://github.com/pyjanitor-devs/pyjanitor"
+  },
+  {
+    "objectID": "index.html#get-started",
+    "href": "index.html#get-started",
+    "title": "Welcome to group_15_data_wrangling",
+    "section": "",
+    "text": "You can install this package into your preferred Python environment using pip:\npip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple group_15_data_wrangling\nTo use group_15_data_wrangling in your code:\n&gt;&gt;&gt; import group_15_data_wrangling\n&gt;&gt;&gt; group_15_data_wrangling(census_df)"
+  },
+  {
+    "objectID": "index.html#contributing",
+    "href": "index.html#contributing",
+    "title": "Welcome to group_15_data_wrangling",
+    "section": "Contributing",
+    "text": "Contributing\n\nSetup development environment\nconda env create -f environment.yml\n\n\nInstall the package and development dependencies\npip install -e .[test,dev,docs]\n\n\nTo run tests\npytest --cov=src --cov-branch --cov-report=term-missing\n\n\nbuild documentation\nTo build documentation\nquartodoc build\nTo preview documentation\nquarto preview\n\n\ndeploy documentation"
+  },
+  {
+    "objectID": "index.html#copyright",
+    "href": "index.html#copyright",
+    "title": "Welcome to group_15_data_wrangling",
+    "section": "Copyright",
+    "text": "Copyright\n\nCopyright © 2026 Michael Eirikson.\nFree software distributed under the MIT License."
+  },
+  {
+    "objectID": "DEVELOPMENT.html",
+    "href": "DEVELOPMENT.html",
+    "title": "Development Guide",
+    "section": "",
+    "text": "Welcome to your shiny new package. This page will help you get started with using Hatch to manage your package.\nIf you look at your project, you will see that a pyproject.toml file. This file stores both your package configuration and settings for development tools like Hatch that you will use to work on your package.\nThis file is written using a .toml format. You can learn more about toml here. Here’s the TL&DR:\n\nEach [] section in the toml file is called a table.\nYou can nest tables with double brackets like this[[]]\nTables contain information about a element that you want to configure.\n\nWe are using Hatch as the default packaging tool. Hatch allows you to configure and run environments and scripts similar to workflow tools like tox or nox.\nHach, by default, uses virtual environments (venv) to manage environments. But you can configure it to use other environment tools.Read the hatch documentation to learn more about environments.\nFor this template, we have set up Hatch environments for you to use. At the bottom of your pyproject.toml file, notice a hatch environment section that looks like this:\n########################################\n# Hatch Environments\n########################################\nBelow is the Hatch environment to install your package. Notice that it defines pip and twine as two packages that the environment needs.\n[tool.hatch.envs.build]\ndescription = \"\"\"Test the installation the package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\nThe table below defines the scripts that you will run build and check your package.\n[tool.hatch.envs.build.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\ndetached = true\nYou can enter that environment to check it out:\n$ hatch shell build\nIf you run pip list, in the environment, twine will be there:\n$ pip list\nHatch by default, installs your package in editable mode (-e) into its virtual environments. But if detached=True is set, then it will skip installing your package into the virtual enviornment.\n\n\nBelow you see the Hatch environment test table.\ntool.hatch.envs says, “Hey, Hatch, this is the definition for an environment.” test is the name of the environment.\nThe environment below defines the dependencies that Hatch needs to install into the environment named test.\n[tool.hatch.envs.test]\ndescription = \"\"\"Run the test suite.\"\"\"\ndependencies = [\n    \"pytest\",\n    \"pytest-cov\",\n    \"pytest-raises\",\n    \"pytest-randomly\",\n    \"pytest-xdist\",\n]\nTo enter a Hatch environment use:\nhatch shell environmentname\nSo you can enter the test environment above with:\nhatch shell test\n\n\n\nIf the environment has a matrix associated with it, that tells Hatch to run the test scripts across different Python versions.\n[[tool.hatch.envs.test.matrix]]\npython = [\"3.10\", \"3.11\", \"3.12\", \"3.13\"]\nIf you run hatch shell test, you will see the output below. To enter an environment with a matrix attached to it, you need to pick the Python environment version that you want to open.\n$ hatch shell test                           \nEnvironment `test` defines a matrix, choose one of the following instead:\n\ntest.py3.10\ntest.py3.11\ntest.py3.12\ntest.py3.13\nOpen the Python 3.13 environment like this:\n$ hatch shell test.py3.13\nTo leave an environment use:\n$ deactivate\n\n\n\nIn the tests section of your pyproject.toml, you will see a tool.hatch.envs.test.scripts table.\nThis table defines the commands that you want Hatch to run in the test environment. Notice that the script has one command called run.\n[tool.hatch.envs.test.scripts]\nrun = \"pytest {args:--cov=greatproject --cov-report=term-missing}\"\nTo run this script , use:\nhatch run test:run\n\nhatch run: calls Hatch and tells it that it will be running a command\ntest:run: defines the environment you want it to run (test) and defines the name of the “script” to berun.\n\nIf you have a Hatch matrix setup for tests, it will both install the necessary Python version using UV and run your tests on each version of the Python versions that you declare in the matrix table. In this case, there are 4 Python versions in the environment, so your tests will run 4 times, once in each Python version listed in the matrix table.\n@lwasser ➜ /workspaces/pyopensci-scipy25-create-python-package (main) $ hatch run test:run\n──────────────────────────────────────────────────────────────────────── test.py3.10 ────────────────────────────────────────────────────────────────────────\n==================================================================== test session starts ====================================================================\nplatform linux -- Python 3.10.16, pytest-8.4.1, pluggy-1.6.0\nUsing --randomly-seed=1490740387\nrootdir: /workspaces/pyopensci-scipy25-create-python-package\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: xdist-3.8.0, randomly-3.16.0, raises-0.11, cov-6.2.1\ncollected 2 items                                                                                                                                           \n\ntests/system/test_import.py .                                                                                                                         [ 50%]\ntests/unit/test_example.py .                                                                                                                          [100%]\n\n====================================================================== tests coverage =======================================================================\n_____________________________________________________ coverage: platform linux, python 3.10.16-final-0 ______________________________________________________\n\nName                           Stmts   Miss Branch BrPart    Cover   Missing\n----------------------------------------------------------------------------\nsrc/greatproject/__init__.py       0      0      0      0  100.00%\nsrc/greatproject/example.py        2      0      0      0  100.00%\n----------------------------------------------------------------------------\nTOTAL                              2      0      0      0  100.00%\n===================================================================== 2 passed in 0.05s =====================================================================\n──────────────────────────────────────────────────────────────────────── test.py3.11 ────────────────────────────────────────────────────────────────────────\n==================================================================== test session starts ====================================================================\nplatform linux -- Python 3.11.12, pytest-8.4.1, pluggy-1.6.0\nUsing --randomly-seed=1596865075\nrootdir: /workspaces/pyopensci-scipy25-create-python-package\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: xdist-3.8.0, randomly-3.16.0, raises-0.11, cov-6.2.1\ncollected 2 items                                                                                                                                           \n\ntests/system/test_import.py .                                                                                                                         [ 50%]\ntests/unit/test_example.py .                                                                                                                          [100%]\n\n====================================================================== tests coverage =======================================================================\n_____________________________________________________ coverage: platform linux, python 3.11.12-final-0 ______________________________________________________\n\nName                           Stmts   Miss Branch BrPart    Cover   Missing\n----------------------------------------------------------------------------\nsrc/greatproject/__init__.py       0      0      0      0  100.00%\nsrc/greatproject/example.py        2      0      0      0  100.00%\n----------------------------------------------------------------------------\nTOTAL                              2      0      0      0  100.00%\n===================================================================== 2 passed in 0.05s =====================================================================\n\n\n\nYou can build your package using the environment and scripts defined in the build tables:\nhatch run build:check\nThis script builds and checks the output distribution files of your package.\nThis build environment table declares that pip and twine should be added to that environment. Adding pip to the environment ensures that it is a current, up-to-date version.\n[tool.hatch.envs.build]\ndescription = \"\"\"Build and test your package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\ndetached = true\n# This table installs created the command hatch run install:check which will build and check your package.\n[tool.hatch.envs.install.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\nThis uses the above environment and tells hatch to run\n\npip check, # verifies your dependencies\nhatch build --clean\n\ntwine check dist/* # this checks your distribution for metadata and other potential issues. to build and test your package."
+  },
+  {
+    "objectID": "DEVELOPMENT.html#build-your-package",
+    "href": "DEVELOPMENT.html#build-your-package",
+    "title": "Development Guide",
+    "section": "",
+    "text": "You can build your package using the environment and scripts defined in the build tables:\nhatch run build:check\nThis script builds and checks the output distribution files of your package.\nThis build environment table declares that pip and twine should be added to that environment. Adding pip to the environment ensures that it is a current, up-to-date version.\n[tool.hatch.envs.build]\ndescription = \"\"\"Build and test your package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\ndetached = true\n# This table installs created the command hatch run install:check which will build and check your package.\n[tool.hatch.envs.install.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\nThis uses the above environment and tells hatch to run\n\npip check, # verifies your dependencies\nhatch build --clean\n\ntwine check dist/* # this checks your distribution for metadata and other potential issues. to build and test your package."
+  },
+  {
+    "objectID": "reference/categorical_mode.html",
+    "href": "reference/categorical_mode.html",
+    "title": "categorical_mode",
+    "section": "",
+    "text": "categorical_mode\nA module that performing cleaning and mode-based imputation for categorical data.\n\n\n\n\n\nName\nDescription\n\n\n\n\ncat_mode_impute\nPerforms cleaning and mode-based imputation for categorical data.\n\n\n\n\n\ncategorical_mode.cat_mode_impute(data, columns=None, sign='?')\nPerforms cleaning and mode-based imputation for categorical data.\nThis function identifies missing values (e.g. “?”), and replaces them with the most frequent (mode) category observed in that column. The imputation is performed independently for each targeted column. If columns is None, the function automatically targets all columns in the DataFrame that contain at least one occurrence of sign. If multiple categories are tied for the mode, the imputed value is chosen deterministically as the lexicographically smallest category.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndata\npd.DataFrame\nThe raw input DataFrame (e.g., Adult Census Income data).\nrequired\n\n\ncolumns\nlist of str\nThe specific columns to clean and impute. If None, all columns that contain the missing value indicator sign are targeted.\nNone\n\n\nsign\nstr\nThe specific string used in the dataset to denote missing values.\n\"?\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA cleaned DataFrame, where the signs have been replaced by the column mode.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf data is not a pandas DataFrame.\n\n\n\nValueError\nIf sign is not found in any of the targeted columns, or if a targeted column contains only missing values.\n\n\n\nKeyError\nIf a column in columns is missing from the DataFrame."
+  },
+  {
+    "objectID": "reference/categorical_mode.html#functions",
+    "href": "reference/categorical_mode.html#functions",
+    "title": "categorical_mode",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\ncat_mode_impute\nPerforms cleaning and mode-based imputation for categorical data.\n\n\n\n\n\ncategorical_mode.cat_mode_impute(data, columns=None, sign='?')\nPerforms cleaning and mode-based imputation for categorical data.\nThis function identifies missing values (e.g. “?”), and replaces them with the most frequent (mode) category observed in that column. The imputation is performed independently for each targeted column. If columns is None, the function automatically targets all columns in the DataFrame that contain at least one occurrence of sign. If multiple categories are tied for the mode, the imputed value is chosen deterministically as the lexicographically smallest category.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndata\npd.DataFrame\nThe raw input DataFrame (e.g., Adult Census Income data).\nrequired\n\n\ncolumns\nlist of str\nThe specific columns to clean and impute. If None, all columns that contain the missing value indicator sign are targeted.\nNone\n\n\nsign\nstr\nThe specific string used in the dataset to denote missing values.\n\"?\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA cleaned DataFrame, where the signs have been replaced by the column mode.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf data is not a pandas DataFrame.\n\n\n\nValueError\nIf sign is not found in any of the targeted columns, or if a targeted column contains only missing values.\n\n\n\nKeyError\nIf a column in columns is missing from the DataFrame."
+  },
+  {
+    "objectID": "reference/index.html",
+    "href": "reference/index.html",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to inspect docstrings.\n\n\n\ncat_mode_impute\nPerforms cleaning and mode-based imputation for categorical data.\n\n\nclean_col_name\nA module that cleans column names for the Adult Census Income dataset.\n\n\nencode_income_binary\nEncode the income column of the Adult Census Income dataset into a binary target.\n\n\nset_dtypes\nA module that sets the data type for the Adult Census Income dataset.",
+    "crumbs": [
+      "Reference",
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#functions",
+    "href": "reference/index.html#functions",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to inspect docstrings.\n\n\n\ncat_mode_impute\nPerforms cleaning and mode-based imputation for categorical data.\n\n\nclean_col_name\nA module that cleans column names for the Adult Census Income dataset.\n\n\nencode_income_binary\nEncode the income column of the Adult Census Income dataset into a binary target.\n\n\nset_dtypes\nA module that sets the data type for the Adult Census Income dataset.",
+    "crumbs": [
+      "Reference",
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/cat_mode_impute.html",
+    "href": "reference/cat_mode_impute.html",
+    "title": "cat_mode_impute",
+    "section": "",
+    "text": "cat_mode_impute(data, columns=None, sign='?')\nPerforms cleaning and mode-based imputation for categorical data.\nThis function identifies missing values (e.g. “?”), and replaces them with the most frequent (mode) category observed in that column. The imputation is performed independently for each targeted column. If columns is None, the function automatically targets all columns in the DataFrame that contain at least one occurrence of sign. If multiple categories are tied for the mode, the imputed value is chosen deterministically as the lexicographically smallest category.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndata\npd.DataFrame\nThe raw input DataFrame (e.g., Adult Census Income data).\nrequired\n\n\ncolumns\nlist of str\nThe specific columns to clean and impute. If None, all columns that contain the missing value indicator sign are targeted.\nNone\n\n\nsign\nstr\nThe specific string used in the dataset to denote missing values.\n\"?\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA cleaned DataFrame, where the signs have been replaced by the column mode.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf data is not a pandas DataFrame.\n\n\n\nValueError\nIf sign is not found in any of the targeted columns, or if a targeted column contains only missing values.\n\n\n\nKeyError\nIf a column in columns is missing from the DataFrame.",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "cat_mode_impute"
+    ]
+  },
+  {
+    "objectID": "reference/cat_mode_impute.html#parameters",
+    "href": "reference/cat_mode_impute.html#parameters",
+    "title": "cat_mode_impute",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndata\npd.DataFrame\nThe raw input DataFrame (e.g., Adult Census Income data).\nrequired\n\n\ncolumns\nlist of str\nThe specific columns to clean and impute. If None, all columns that contain the missing value indicator sign are targeted.\nNone\n\n\nsign\nstr\nThe specific string used in the dataset to denote missing values.\n\"?\"",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "cat_mode_impute"
+    ]
+  },
+  {
+    "objectID": "reference/cat_mode_impute.html#returns",
+    "href": "reference/cat_mode_impute.html#returns",
+    "title": "cat_mode_impute",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA cleaned DataFrame, where the signs have been replaced by the column mode.",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "cat_mode_impute"
+    ]
+  },
+  {
+    "objectID": "reference/cat_mode_impute.html#raises",
+    "href": "reference/cat_mode_impute.html#raises",
+    "title": "cat_mode_impute",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nTypeError\nIf data is not a pandas DataFrame.\n\n\n\nValueError\nIf sign is not found in any of the targeted columns, or if a targeted column contains only missing values.\n\n\n\nKeyError\nIf a column in columns is missing from the DataFrame.",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "cat_mode_impute"
+    ]
+  }
+]
