@@ -39,7 +39,7 @@ quartodoc:
       contents:
         # the functions being documented in the package.
         # you can refer to anything: class methods, modules, etc..
-        - categorical_mode
+        - cat_mode_impute
         - clean_col_name
-        - encode_income
+        - encode_income_binary
         - set_dtypes

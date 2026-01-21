@@ -1,0 +1,38 @@
+# cat_mode_impute { #group_15_data_wrangling.cat_mode_impute }
+
+```python
+cat_mode_impute(data, columns=None, sign='?')
+```
+
+Performs cleaning and mode-based imputation for categorical data.
+
+This function identifies missing values (e.g. "?"),
+and replaces them with the most frequent (mode) category observed
+in that column. The imputation is performed independently for each
+targeted column.
+If `columns` is None, the function automatically targets all columns
+in the DataFrame that contain at least one occurrence of `sign`.
+If multiple categories are tied for the mode, the imputed value is
+chosen deterministically as the lexicographically smallest category.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name    | Type         | Description                                                                                                                  | Default    |
+|---------|--------------|------------------------------------------------------------------------------------------------------------------------------|------------|
+| data    | pd.DataFrame | The raw input DataFrame (e.g., Adult Census Income data).                                                                    | _required_ |
+| columns | list of str  | The specific columns to clean and impute. If None, all columns that contain the missing value indicator `sign` are targeted. | `None`     |
+| sign    | str          | The specific string used in the dataset to denote missing values.                                                            | `"?"`      |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type         | Description                                                                 |
+|--------|--------------|-----------------------------------------------------------------------------|
+|        | pd.DataFrame | A cleaned DataFrame, where the signs have been replaced by the column mode. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type       | Description                                                                                                  |
+|--------|------------|--------------------------------------------------------------------------------------------------------------|
+|        | TypeError  | If `data` is not a pandas DataFrame.                                                                         |
+|        | ValueError | If `sign` is not found in any of the targeted columns, or if a targeted column contains only missing values. |
+|        | KeyError   | If a column in `columns` is missing from the DataFrame.                                                      |

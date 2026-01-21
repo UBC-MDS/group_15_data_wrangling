@@ -3,9 +3,9 @@ website:
   - contents:
     - reference/index.qmd
     - contents:
-      - reference/categorical_mode.qmd
+      - reference/cat_mode_impute.qmd
       - reference/clean_col_name.qmd
-      - reference/encode_income.qmd
+      - reference/encode_income_binary.qmd
       - reference/set_dtypes.qmd
       section: Functions
     id: reference
