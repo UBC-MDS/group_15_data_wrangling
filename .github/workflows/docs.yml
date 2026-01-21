@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   push:
-    branches: main
+    branches: ["main" "dev-milestone-3"]
 
 name: Run and publish docs
 
