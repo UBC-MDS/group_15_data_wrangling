@@ -1,6 +1,6 @@
 import pytest
 import pandas as pd
-from group_15_data_wrangling.clean_col_name import clean_col_name
+from group_15_data_wrangling.clean_col_names import clean_col_name
 
 def test_clean_col_name():
     # df: original test dataframe, out: dataframe after using the function
@@ -33,7 +33,7 @@ def test_clean_col_name():
 def test_clean_col_name_wrong_input():
     wrong_input = ["not", "dataframe"]
     with pytest.raises(TypeError, match="must be a dataframe"):
-        clean_col_name(wrong_input)
+        clean_col_name(wrong_input) # pyright: ignore[reportArgumentType]
 
 # missing column name
 def test_clean_col_name_missing():

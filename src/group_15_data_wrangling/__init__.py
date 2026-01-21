@@ -29,7 +29,7 @@ its purpose, and any important notes.
 """
 
 from group_15_data_wrangling.categorical_mode import cat_mode_impute
-from group_15_data_wrangling.clean_col_name import clean_col_name
+from group_15_data_wrangling.clean_col_names import clean_col_name
 from group_15_data_wrangling.encode_income import encode_income_binary
 from group_15_data_wrangling.set_dtypes import set_dtype
 
