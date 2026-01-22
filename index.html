@@ -198,50 +198,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="get-started">Get started</h2>
 <p>You can install this package into your preferred Python environment using pip:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">--index-url</span> https://test.pypi.org/simple/ <span class="at">--extra-index-url</span> https://pypi.org/simple group_15_data_wrangling</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>To use group_15_data_wrangling in your code:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> group_15_data_wrangling</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> group_15_data_wrangling(census_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To use <code>group_15_data_wrangling</code> in your code:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">from</span> group_15_data_wrangling <span class="im">import</span> cat_mode_impute, clean_col_name, encode_income_binary, set_dtype</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> census_df_no_nan <span class="op">=</span> cat_mode_impute(census_df)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> census_df_clean_names <span class="op">=</span> clean_col_name(census_df)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> census_df_binary_income <span class="op">=</span> encode_income_binary(census_df)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> census_df_consise_dtypes <span class="op">=</span> set_dtype(census_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="documentation" class="level3">
 <h3 class="anchored" data-anchor-id="documentation">Documentation</h3>
+<p><a href="https://ubc-mds.github.io/group_15_data_wrangling/">Documentation can be found here</a></p>
 </section>
 </section>
-</section>
-<section id="documentation-repo-link-here" class="level1">
-<h1>DOCUMENTATION REPO LINK HERE</h1>
 <section id="contributing" class="level2">
 <h2 class="anchored" data-anchor-id="contributing">Contributing</h2>
-<section id="setup-development-environment" class="level3">
-<h3 class="anchored" data-anchor-id="setup-development-environment">Setup development environment</h3>
-<p><code>conda env create -f environment.yml</code></p>
-</section>
-<section id="install-the-package-and-development-dependencies" class="level3">
-<h3 class="anchored" data-anchor-id="install-the-package-and-development-dependencies">Install the package and development dependencies</h3>
-<p><code>pip install -e .[test,dev,docs]</code></p>
-</section>
-<section id="to-run-tests" class="level3">
-<h3 class="anchored" data-anchor-id="to-run-tests">To run tests</h3>
-<p><code>pytest --cov=src --cov-branch --cov-report=term-missing</code></p>
-</section>
-<section id="build-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="build-documentation">build documentation</h3>
-<p>To build documentation</p>
-<p><code>quartodoc build</code></p>
-<p>To preview documentation</p>
-<p><code>quarto preview</code></p>
-</section>
-<section id="deploy-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="deploy-documentation">deploy documentation</h3>
-</section>
-</section>
-</section>
-<section id="add-stuff-here" class="level1">
-<h1>ADD STUFF HERE</h1>
 <section id="github-repo" class="level3">
-<h3 class="anchored" data-anchor-id="github-repo">Github Repo</h3>
+<h3 class="anchored" data-anchor-id="github-repo">Github repo</h3>
 <p><a href="https://github.com/UBC-MDS/group_15_data_wrangling" class="uri">https://github.com/UBC-MDS/group_15_data_wrangling</a></p>
 </section>
-<section id="contributors" class="level3">
-<h3 class="anchored" data-anchor-id="contributors">Contributors</h3>
+<section id="get-started-contributing" class="level3">
+<h3 class="anchored" data-anchor-id="get-started-contributing">Get started contributing</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="op">&lt;</span>repo<span class="op">&gt;</span> <span class="co"># clone group_15_data_wrangling repo</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml <span class="co"># setup dev environment</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e</span> .<span class="pp">[</span><span class="ss">test,dev,docs</span><span class="pp">]</span> <span class="co"># install package and development dependencies</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="run-tests" class="level3">
+<h3 class="anchored" data-anchor-id="run-tests">Run tests</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pytest</span> <span class="at">--cov</span><span class="op">=</span>src <span class="at">--cov-branch</span> <span class="at">--cov-report</span><span class="op">=</span>term-missing</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="build-preview-and-deploy-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="build-preview-and-deploy-documentation">build, preview and deploy documentation</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quartodoc</span> build</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Documentation website update automatically on push to <code>main</code>.</p>
+<p>To force update documentation website from the current branch run (probably don’t do this).</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="contributors" class="level2">
+<h2 class="anchored" data-anchor-id="contributors">Contributors</h2>
 <ul>
 <li>Limor Winter</li>
 <li>Shihan Xu</li>

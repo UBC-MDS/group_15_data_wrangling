@@ -2,34 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/reference/encode_income_binary.html</loc>
-    <lastmod>2026-01-21T17:45:42.661Z</lastmod>
+    <lastmod>2026-01-21T22:52:34.020Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/reference/clean_col_name.html</loc>
-    <lastmod>2026-01-21T17:58:49.064Z</lastmod>
+    <lastmod>2026-01-21T22:52:34.018Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-MDS.github.io/group_15_data_wrangling/reference/set_dtypes.html</loc>
-    <lastmod>2026-01-21T17:58:49.064Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UBC-MDS.github.io/group_15_data_wrangling/reference/encode_income.html</loc>
-    <lastmod>2026-01-21T17:58:49.064Z</lastmod>
+    <loc>https://UBC-MDS.github.io/group_15_data_wrangling/reference/set_dtype.html</loc>
+    <lastmod>2026-01-21T22:52:34.022Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/CONTRIBUTING.html</loc>
     <lastmod>2026-01-21T17:58:49.053Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-MDS.github.io/group_15_data_wrangling/docs/index.html</loc>
-    <lastmod>2026-01-21T17:58:49.062Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UBC-MDS.github.io/group_15_data_wrangling/CODE_OF_CONDUCT.html</loc>
+    <loc>https://UBC-MDS.github.io/group_15_data_wrangling/CHANGELOG.html</loc>
     <lastmod>2026-01-21T17:58:49.052Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-MDS.github.io/group_15_data_wrangling/CHANGELOG.html</loc>
+    <loc>https://UBC-MDS.github.io/group_15_data_wrangling/CODE_OF_CONDUCT.html</loc>
     <lastmod>2026-01-21T17:58:49.052Z</lastmod>
   </url>
   <url>
@@ -41,15 +33,11 @@
     <lastmod>2026-01-21T17:58:49.053Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-MDS.github.io/group_15_data_wrangling/reference/categorical_mode.html</loc>
-    <lastmod>2026-01-21T17:58:49.064Z</lastmod>
-  </url>
-  <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/reference/index.html</loc>
-    <lastmod>2026-01-21T17:58:49.094Z</lastmod>
+    <lastmod>2026-01-21T22:52:34.003Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/reference/cat_mode_impute.html</loc>
-    <lastmod>2026-01-21T17:45:42.656Z</lastmod>
+    <lastmod>2026-01-21T22:52:34.016Z</lastmod>
   </url>
 </urlset>
