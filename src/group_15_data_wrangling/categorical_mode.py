@@ -1,3 +1,7 @@
+"""
+A module that performing cleaning and mode-based imputation for categorical data.
+"""
+
 import pandas as pd
 
 def cat_mode_impute(data, columns=None, sign="?"):

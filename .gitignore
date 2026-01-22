@@ -1,3 +1,7 @@
+_site
+docs
+/reference/
+
 ### Linux template
 *~
 
@@ -243,3 +247,5 @@ cython_debug/
 
 # Hatch-VCS
 _version.py
+
+/.quarto/

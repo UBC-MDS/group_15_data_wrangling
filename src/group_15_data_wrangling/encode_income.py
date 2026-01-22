@@ -1,5 +1,5 @@
 """
-A module that encodes the target income column
+A module that encodes the target income column.
 
 The goal is to convert the target variable into a binary numeric representation. Our target
 varibale is currently categorical, so encoding this column into a binary representation 

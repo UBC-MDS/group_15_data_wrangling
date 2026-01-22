@@ -1,7 +1,7 @@
 """
 A module that sets the data type for the Adult Census Income dataset.
 
-The purpose of this is to increase memory and compute efficiency
+The purpose of this is to increase memory and compute efficiency.
 """
 
 import pandas as pd

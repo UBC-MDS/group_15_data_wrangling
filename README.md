@@ -31,14 +31,56 @@ There is an existant package called `pyjanitor` that has many useful data cleani
 You can install this package into your preferred Python environment using pip:
 
 ```bash
-pip install group_15_data_wrangling
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple group_15_data_wrangling
 ```
 
-To use group_15_data_wrangling in your code:
+To use `group_15_data_wrangling` in your code:
 
 ```python
->>> import group_15_data_wrangling
->>> group_15_data_wrangling.hello_world()
+>>> from group_15_data_wrangling import cat_mode_impute, clean_col_name, encode_income_binary, set_dtype
+>>> census_df_no_nan = cat_mode_impute(census_df)
+>>> census_df_clean_names = clean_col_name(census_df)
+>>> census_df_binary_income = encode_income_binary(census_df)
+>>> census_df_consise_dtypes = set_dtype(census_df)
+```
+
+### Documentation
+
+[Documentation can be found here](https://ubc-mds.github.io/group_15_data_wrangling/)
+
+## Contributing
+
+### Github repo
+
+<https://github.com/UBC-MDS/group_15_data_wrangling>
+
+### Get started contributing
+
+```bash
+git clone <repo> # clone group_15_data_wrangling repo
+conda env create -f environment.yml # setup dev environment
+pip install -e .[test,dev,docs] # install package and development dependencies
+```
+
+### Run tests
+
+```bash
+pytest --cov=src --cov-branch --cov-report=term-missing
+```
+
+### build, preview and deploy documentation
+
+```bash
+quartodoc build
+quarto preview
+```
+
+Documentation website update automatically on push to `main`.
+
+To force update documentation website from the current branch run (probably don't do this).
+
+```bash
+quarto publish gh-pages
 ```
 
 ## Contributors

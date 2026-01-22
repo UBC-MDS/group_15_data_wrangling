@@ -1,0 +1,45 @@
+project:
+  type: website
+
+website:
+  title: Adult Census Dataset Wrangling
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Reference
+        href: reference/index.qmd
+
+# tell quarto to read the generated sidebar
+metadata-files:
+  - reference/_sidebar.yml
+
+# tell quarto to read the generated styles
+format:
+  html:
+    css:
+      - reference/_styles-quartodoc.css
+
+quartodoc:
+  # the name used to import the package you want to create reference docs for
+  package: group_15_data_wrangling
+
+  # write sidebar and style data
+  sidebar: reference/_sidebar.yml
+  css: reference/_styles-quartodoc.css
+
+  sections:
+    # - title: Overview
+    #   contents:
+    #     - README.md
+    - title: Functions
+      desc: Functions to inspect docstrings.
+      contents:
+        # the functions being documented in the package.
+        # you can refer to anything: class methods, modules, etc..
+        - cat_mode_impute
+        - clean_col_name
+        - encode_income_binary
+        - set_dtype
