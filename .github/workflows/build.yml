@@ -34,9 +34,9 @@ jobs:
           pip install -e ".[tests]"
           pip install ruff
 
-      - name: Run tests
+      - name: Run tests with coverage
         run: |
-          pytest
+          pytest --cov --cov-report=term --cov-branch
 
       - name: Run style checks
         run: |
