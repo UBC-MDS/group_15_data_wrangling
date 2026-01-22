@@ -24,42 +24,56 @@ jobs:
     steps:
       # Checks-out your repository so your job can access it
       - name: Check-out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Set up Python
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '>= 3.10'
+          python-version: '3.10'
 
       # Install dependencies
-      - name: Install dependencies
+      - name: Install package + test deps
         run: |
           python -m pip install --upgrade pip
-          pip install -e .[tests]
+          pip install -e ".[tests]"
+          pip install ruff
 
       # Run pytest with coverage
       - name: Run tests with coverage
         run: |
           pytest --cov --cov-report=term --cov-branch
 
+      - name: Run style checks
+        run: |
+          ruff check .
+
   deploy:
-    permissions:
-      id-token:
-      contents:
-    # Only run this job if the "ci" job passes
     needs: build
-
-    # Only run this job if new work is pushed to "main"
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Define job steps
+    
     steps:
-      # Set Up Python
+      - name: Check-out repository
+        uses: actions/checkout@v4
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install hatch
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .[dev]
+
+      - name: Build package
+        run: hatch build
+
+      - name: Publish to Test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          
 
 
