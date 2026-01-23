@@ -1,191 +1,5 @@
 [
   {
-    "objectID": "reference/encode_income_binary.html",
-    "href": "reference/encode_income_binary.html",
-    "title": "encode_income_binary",
-    "section": "",
-    "text": "encode_income_binary(df, target_column='income')\nEncode the income column of the Adult Census Income dataset into a binary target.\nThis function creates a binary target column where: - ‘&lt;=50K’ is encoded as 0 - ‘&gt;50K’ is encoded as 1\nA new column named ‘income_binary’ is added to the returned DataFrame.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nThe adult census income dataset found here in csv form: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\ntarget_column\nstr\nName of the income column to encode.\n'income'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA dataframe with an additional column called income_binary.\n\n\n\n\n\n\n\nencode_income_binary(adult_census_df)",
-    "crumbs": [
-      "Reference",
-      "Functions",
-      "encode_income_binary"
-    ]
-  },
-  {
-    "objectID": "reference/encode_income_binary.html#parameters",
-    "href": "reference/encode_income_binary.html#parameters",
-    "title": "encode_income_binary",
-    "section": "",
-    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nThe adult census income dataset found here in csv form: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\ntarget_column\nstr\nName of the income column to encode.\n'income'",
-    "crumbs": [
-      "Reference",
-      "Functions",
-      "encode_income_binary"
-    ]
-  },
-  {
-    "objectID": "reference/encode_income_binary.html#returns",
-    "href": "reference/encode_income_binary.html#returns",
-    "title": "encode_income_binary",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA dataframe with an additional column called income_binary.",
-    "crumbs": [
-      "Reference",
-      "Functions",
-      "encode_income_binary"
-    ]
-  },
-  {
-    "objectID": "reference/encode_income_binary.html#examples",
-    "href": "reference/encode_income_binary.html#examples",
-    "title": "encode_income_binary",
-    "section": "",
-    "text": "encode_income_binary(adult_census_df)",
-    "crumbs": [
-      "Reference",
-      "Functions",
-      "encode_income_binary"
-    ]
-  },
-  {
-    "objectID": "reference/clean_col_name.html",
-    "href": "reference/clean_col_name.html",
-    "title": "clean_col_name",
-    "section": "",
-    "text": "clean_col_name(df)\nRename columns for consistency and readability and return the new dataframe.\n\nReplace ‘.’ with ’_’\nRename ‘fnlwgt’ to a more meaningful name\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nDataframe including the Adult Census Income dataset.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\ndf\npd.DataFrame\nThe dataframe with new, meaningful column names.\n\n\n\n\n\n\n&gt;&gt;&gt; clean_col_name(df)",
-    "crumbs": [
-      "Reference",
-      "Functions",
-      "clean_col_name"
-    ]
-  },
-  {
-    "objectID": "reference/clean_col_name.html#parameters",
-    "href": "reference/clean_col_name.html#parameters",
-    "title": "clean_col_name",
-    "section": "",
-    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nDataframe including the Adult Census Income dataset.\nrequired",
-    "crumbs": [
-      "Reference",
-      "Functions",
-      "clean_col_name"
-    ]
-  },
-  {
-    "objectID": "reference/clean_col_name.html#returns",
-    "href": "reference/clean_col_name.html#returns",
-    "title": "clean_col_name",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\ndf\npd.DataFrame\nThe dataframe with new, meaningful column names.",
-    "crumbs": [
-      "Reference",
-      "Functions",
-      "clean_col_name"
-    ]
-  },
-  {
-    "objectID": "reference/clean_col_name.html#examples",
-    "href": "reference/clean_col_name.html#examples",
-    "title": "clean_col_name",
-    "section": "",
-    "text": "&gt;&gt;&gt; clean_col_name(df)",
-    "crumbs": [
-      "Reference",
-      "Functions",
-      "clean_col_name"
-    ]
-  },
-  {
-    "objectID": "reference/set_dtype.html",
-    "href": "reference/set_dtype.html",
-    "title": "set_dtype",
-    "section": "",
-    "text": "set_dtype(df)\nUpdate the data types for each columns to increase efficiency.\nSets the follow dtypes: age int8 workclass category fnlwgt int32 education category education.num int8 marital.status category occupation category relationship category race category sex category capital.gain int32 capital.loss int32 hours.per.week int8 native.country category income category\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.Dataframe\nThe adult census income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.Dataframe\nThe adult census imcome dataframe with updated data types.\n\n\n\n\n\n\n&gt;&gt;&gt; set_dtype(adult_census_df)",
-    "crumbs": [
-      "Reference",
-      "Functions",
-      "set_dtype"
-    ]
-  },
-  {
-    "objectID": "reference/set_dtype.html#parameters",
-    "href": "reference/set_dtype.html#parameters",
-    "title": "set_dtype",
-    "section": "",
-    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npd.Dataframe\nThe adult census income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired",
-    "crumbs": [
-      "Reference",
-      "Functions",
-      "set_dtype"
-    ]
-  },
-  {
-    "objectID": "reference/set_dtype.html#returns",
-    "href": "reference/set_dtype.html#returns",
-    "title": "set_dtype",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\npd.Dataframe\nThe adult census imcome dataframe with updated data types.",
-    "crumbs": [
-      "Reference",
-      "Functions",
-      "set_dtype"
-    ]
-  },
-  {
-    "objectID": "reference/set_dtype.html#examples",
-    "href": "reference/set_dtype.html#examples",
-    "title": "set_dtype",
-    "section": "",
-    "text": "&gt;&gt;&gt; set_dtype(adult_census_df)",
-    "crumbs": [
-      "Reference",
-      "Functions",
-      "set_dtype"
-    ]
-  },
-  {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Contributing to group_15_data_wrangling",
-    "section": "",
-    "text": "Contributions of all kinds are welcome here, and they are greatly appreciated! Every little bit helps, and credit will always be given.\nThis CONTRIBUTING.md was adapted from the default Python minimal setup template.\n\n\nYou can contribute in many ways, for example:\n\nReport bugs\nFix Bugs\nImplement Features\nWrite Documentation\nSubmit Feedback\n\n\n\nReport bugs at https://github.com/meirikson/group_15_data_wrangling/issues.\nIf you are reporting a bug, please follow the template guidelines. The more detailed your report, the easier and thus faster we can help you.\n\n\n\nLook through the GitHub issues for bugs. Anything labelled with bug and help wanted is open to whoever wants to implement it. When you decide to work on such an issue, please assign yourself to it and add a comment that you’ll be working on that, too. If you see another issue without the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nLook through the GitHub issues for features. Anything labelled with enhancement and help wanted is open to whoever wants to implement it. As for fixing bugs, please assign yourself to the issue and add a comment that you’ll be working on that, too. If another enhancement catches your fancy, but it doesn’t have the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\ngroup_15_data_wrangling could always use more documentation, whether as part of the official documentation, in docstrings, or even on the web in blog posts, articles, and such. Just open an issue to let us know what you will be working on so that we can provide you with guidance.\n\n\n\nThe best way to send feedback is to file an issue at https://github.com/meirikson/group_15_data_wrangling/issues. If your feedback fits the format of one of the issue templates, please use that. Remember that this is a volunteer-driven project and everybody has limited time.\n\n\n\n\nFor this project, our team follows the GitHub Flow:\n\nCreate a branch from dev-milestone-n for each feature, function, or fix.\n\nBranch naming convention: feature/&lt;function_name&gt; or fix/&lt;issue_name&gt;\n\nWork on your branch locally. Make commits regularly with meaningful messages.\nPush your branch to GitHub:\ngit push -u origin &lt;branch_name&gt;\nCreate a pull request (PR) to merge your branch into dev-milestone-n.\n\nMake sure to link the relevant issue if there is one.\n\n\nThe pull request should include tests.\nIf the pull request adds functionality, the docs should be updated. Put your new functionality into a function with a docstring.\nYour pull request will automatically be checked by the full test suite. It needs to pass all of them before it can be considered for merging.\n\nAnother team member reviews the PR and approves it.\n\nProvide constructive feedback if changes are needed.\n\nOnce approved, merge the PR into dev-milestone-n.\n\nUse “Merge pull request”.\n\nDelete the branch after merging to keep the repository clean.\n\nThis avoids clutter in the repository and keeps dev-milestone-n organized."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#example-contributions",
-    "href": "CONTRIBUTING.html#example-contributions",
-    "title": "Contributing to group_15_data_wrangling",
-    "section": "",
-    "text": "You can contribute in many ways, for example:\n\nReport bugs\nFix Bugs\nImplement Features\nWrite Documentation\nSubmit Feedback\n\n\n\nReport bugs at https://github.com/meirikson/group_15_data_wrangling/issues.\nIf you are reporting a bug, please follow the template guidelines. The more detailed your report, the easier and thus faster we can help you.\n\n\n\nLook through the GitHub issues for bugs. Anything labelled with bug and help wanted is open to whoever wants to implement it. When you decide to work on such an issue, please assign yourself to it and add a comment that you’ll be working on that, too. If you see another issue without the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nLook through the GitHub issues for features. Anything labelled with enhancement and help wanted is open to whoever wants to implement it. As for fixing bugs, please assign yourself to the issue and add a comment that you’ll be working on that, too. If another enhancement catches your fancy, but it doesn’t have the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\ngroup_15_data_wrangling could always use more documentation, whether as part of the official documentation, in docstrings, or even on the web in blog posts, articles, and such. Just open an issue to let us know what you will be working on so that we can provide you with guidance.\n\n\n\nThe best way to send feedback is to file an issue at https://github.com/meirikson/group_15_data_wrangling/issues. If your feedback fits the format of one of the issue templates, please use that. Remember that this is a volunteer-driven project and everybody has limited time."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#github-workflow-for-team-contributions",
-    "href": "CONTRIBUTING.html#github-workflow-for-team-contributions",
-    "title": "Contributing to group_15_data_wrangling",
-    "section": "",
-    "text": "For this project, our team follows the GitHub Flow:\n\nCreate a branch from dev-milestone-n for each feature, function, or fix.\n\nBranch naming convention: feature/&lt;function_name&gt; or fix/&lt;issue_name&gt;\n\nWork on your branch locally. Make commits regularly with meaningful messages.\nPush your branch to GitHub:\ngit push -u origin &lt;branch_name&gt;\nCreate a pull request (PR) to merge your branch into dev-milestone-n.\n\nMake sure to link the relevant issue if there is one.\n\n\nThe pull request should include tests.\nIf the pull request adds functionality, the docs should be updated. Put your new functionality into a function with a docstring.\nYour pull request will automatically be checked by the full test suite. It needs to pass all of them before it can be considered for merging.\n\nAnother team member reviews the PR and approves it.\n\nProvide constructive feedback if changes are needed.\n\nOnce approved, merge the PR into dev-milestone-n.\n\nUse “Merge pull request”.\n\nDelete the branch after merging to keep the repository clean.\n\nThis avoids clutter in the repository and keeps dev-milestone-n organized."
-  },
-  {
-    "objectID": "CHANGELOG.html",
-    "href": "CHANGELOG.html",
-    "title": "Changelog",
-    "section": "",
-    "text": "All notable changes to this project will be documented in this file.\nThe format is based on Keep a Changelog, and this project adheres to Semantic Versioning.\n\n\n\nUpcoming features and fixes\n\n\n\n\n\nFirst release"
-  },
-  {
-    "objectID": "CHANGELOG.html#unreleased",
-    "href": "CHANGELOG.html#unreleased",
-    "title": "Changelog",
-    "section": "",
-    "text": "Upcoming features and fixes"
-  },
-  {
-    "objectID": "CHANGELOG.html#section",
-    "href": "CHANGELOG.html#section",
-    "title": "Changelog",
-    "section": "",
-    "text": "First release"
-  },
-  {
     "objectID": "CODE_OF_CONDUCT.html",
     "href": "CODE_OF_CONDUCT.html",
     "title": "Contributor Covenant Code of Conduct",
@@ -242,6 +56,102 @@
     "text": "This Code of Conduct is adapted from the Contributor Covenant, version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations."
   },
   {
+    "objectID": "reference/clean_col_name.html",
+    "href": "reference/clean_col_name.html",
+    "title": "clean_col_name",
+    "section": "",
+    "text": "clean_col_name(df)\nRename columns for consistency and readability and return the new dataframe.\n\nReplace ‘.’ with ’_’\nRename ‘fnlwgt’ to a more meaningful name\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nDataframe including the Adult Census Income dataset.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\ndf\npd.DataFrame\nThe dataframe with new, meaningful column names.\n\n\n\n\n\n\n&gt;&gt;&gt; clean_col_name(df)",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "clean_col_name"
+    ]
+  },
+  {
+    "objectID": "reference/clean_col_name.html#parameters",
+    "href": "reference/clean_col_name.html#parameters",
+    "title": "clean_col_name",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nDataframe including the Adult Census Income dataset.\nrequired",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "clean_col_name"
+    ]
+  },
+  {
+    "objectID": "reference/clean_col_name.html#returns",
+    "href": "reference/clean_col_name.html#returns",
+    "title": "clean_col_name",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\ndf\npd.DataFrame\nThe dataframe with new, meaningful column names.",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "clean_col_name"
+    ]
+  },
+  {
+    "objectID": "reference/clean_col_name.html#examples",
+    "href": "reference/clean_col_name.html#examples",
+    "title": "clean_col_name",
+    "section": "",
+    "text": "&gt;&gt;&gt; clean_col_name(df)",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "clean_col_name"
+    ]
+  },
+  {
+    "objectID": "reference/encode_income_binary.html",
+    "href": "reference/encode_income_binary.html",
+    "title": "encode_income_binary",
+    "section": "",
+    "text": "encode_income_binary(df, target_column='income')\nEncode the income column of the Adult Census Income dataset into a binary target.\nThis function creates a binary target column where: - ‘&lt;=50K’ is encoded as 0 - ‘&gt;50K’ is encoded as 1\nA new column named ‘income_binary’ is added to the returned DataFrame.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nThe adult census income dataset found here in csv form: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\ntarget_column\nstr\nName of the income column to encode.\n'income'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA dataframe with an additional column called income_binary.\n\n\n\n\n\n\n\nencode_income_binary(adult_census_df)",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "encode_income_binary"
+    ]
+  },
+  {
+    "objectID": "reference/encode_income_binary.html#parameters",
+    "href": "reference/encode_income_binary.html#parameters",
+    "title": "encode_income_binary",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nThe adult census income dataset found here in csv form: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\ntarget_column\nstr\nName of the income column to encode.\n'income'",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "encode_income_binary"
+    ]
+  },
+  {
+    "objectID": "reference/encode_income_binary.html#returns",
+    "href": "reference/encode_income_binary.html#returns",
+    "title": "encode_income_binary",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA dataframe with an additional column called income_binary.",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "encode_income_binary"
+    ]
+  },
+  {
+    "objectID": "reference/encode_income_binary.html#examples",
+    "href": "reference/encode_income_binary.html#examples",
+    "title": "encode_income_binary",
+    "section": "",
+    "text": "encode_income_binary(adult_census_df)",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "encode_income_binary"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome to group_15_data_wrangling",
@@ -296,6 +206,48 @@
     "title": "Development Guide",
     "section": "",
     "text": "You can build your package using the environment and scripts defined in the build tables:\nhatch run build:check\nThis script builds and checks the output distribution files of your package.\nThis build environment table declares that pip and twine should be added to that environment. Adding pip to the environment ensures that it is a current, up-to-date version.\n[tool.hatch.envs.build]\ndescription = \"\"\"Build and test your package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\ndetached = true\n# This table installs created the command hatch run install:check which will build and check your package.\n[tool.hatch.envs.install.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\nThis uses the above environment and tells hatch to run\n\npip check, # verifies your dependencies\nhatch build --clean\n\ntwine check dist/* # this checks your distribution for metadata and other potential issues. to build and test your package."
+  },
+  {
+    "objectID": "CHANGELOG.html",
+    "href": "CHANGELOG.html",
+    "title": "Changelog",
+    "section": "",
+    "text": "All notable changes to this project will be documented in this file.\nThe format is based on Keep a Changelog, and this project adheres to Semantic Versioning.\n\n\n\nUpcoming features and fixes\n\n\n\n\n\nFirst release"
+  },
+  {
+    "objectID": "CHANGELOG.html#unreleased",
+    "href": "CHANGELOG.html#unreleased",
+    "title": "Changelog",
+    "section": "",
+    "text": "Upcoming features and fixes"
+  },
+  {
+    "objectID": "CHANGELOG.html#section",
+    "href": "CHANGELOG.html#section",
+    "title": "Changelog",
+    "section": "",
+    "text": "First release"
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing to group_15_data_wrangling",
+    "section": "",
+    "text": "Contributions of all kinds are welcome here, and they are greatly appreciated! Every little bit helps, and credit will always be given.\nThis CONTRIBUTING.md was adapted from the default Python minimal setup template.\n\n\nYou can contribute in many ways, for example:\n\nReport bugs\nFix Bugs\nImplement Features\nWrite Documentation\nSubmit Feedback\n\n\n\nReport bugs at https://github.com/meirikson/group_15_data_wrangling/issues.\nIf you are reporting a bug, please follow the template guidelines. The more detailed your report, the easier and thus faster we can help you.\n\n\n\nLook through the GitHub issues for bugs. Anything labelled with bug and help wanted is open to whoever wants to implement it. When you decide to work on such an issue, please assign yourself to it and add a comment that you’ll be working on that, too. If you see another issue without the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nLook through the GitHub issues for features. Anything labelled with enhancement and help wanted is open to whoever wants to implement it. As for fixing bugs, please assign yourself to the issue and add a comment that you’ll be working on that, too. If another enhancement catches your fancy, but it doesn’t have the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\ngroup_15_data_wrangling could always use more documentation, whether as part of the official documentation, in docstrings, or even on the web in blog posts, articles, and such. Just open an issue to let us know what you will be working on so that we can provide you with guidance.\n\n\n\nThe best way to send feedback is to file an issue at https://github.com/meirikson/group_15_data_wrangling/issues. If your feedback fits the format of one of the issue templates, please use that. Remember that this is a volunteer-driven project and everybody has limited time.\n\n\n\n\nFor this project, our team follows the GitHub Flow:\n\nCreate a branch from dev-milestone-n for each feature, function, or fix.\n\nBranch naming convention: feature/&lt;function_name&gt; or fix/&lt;issue_name&gt;\n\nWork on your branch locally. Make commits regularly with meaningful messages.\nPush your branch to GitHub:\ngit push -u origin &lt;branch_name&gt;\nCreate a pull request (PR) to merge your branch into dev-milestone-n.\n\nMake sure to link the relevant issue if there is one.\n\n\nThe pull request should include tests.\nIf the pull request adds functionality, the docs should be updated. Put your new functionality into a function with a docstring.\nYour pull request will automatically be checked by the full test suite. It needs to pass all of them before it can be considered for merging.\n\nAnother team member reviews the PR and approves it.\n\nProvide constructive feedback if changes are needed.\n\nOnce approved, merge the PR into dev-milestone-n.\n\nUse “Merge pull request”.\n\nDelete the branch after merging to keep the repository clean.\n\nThis avoids clutter in the repository and keeps dev-milestone-n organized."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#example-contributions",
+    "href": "CONTRIBUTING.html#example-contributions",
+    "title": "Contributing to group_15_data_wrangling",
+    "section": "",
+    "text": "You can contribute in many ways, for example:\n\nReport bugs\nFix Bugs\nImplement Features\nWrite Documentation\nSubmit Feedback\n\n\n\nReport bugs at https://github.com/meirikson/group_15_data_wrangling/issues.\nIf you are reporting a bug, please follow the template guidelines. The more detailed your report, the easier and thus faster we can help you.\n\n\n\nLook through the GitHub issues for bugs. Anything labelled with bug and help wanted is open to whoever wants to implement it. When you decide to work on such an issue, please assign yourself to it and add a comment that you’ll be working on that, too. If you see another issue without the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nLook through the GitHub issues for features. Anything labelled with enhancement and help wanted is open to whoever wants to implement it. As for fixing bugs, please assign yourself to the issue and add a comment that you’ll be working on that, too. If another enhancement catches your fancy, but it doesn’t have the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\ngroup_15_data_wrangling could always use more documentation, whether as part of the official documentation, in docstrings, or even on the web in blog posts, articles, and such. Just open an issue to let us know what you will be working on so that we can provide you with guidance.\n\n\n\nThe best way to send feedback is to file an issue at https://github.com/meirikson/group_15_data_wrangling/issues. If your feedback fits the format of one of the issue templates, please use that. Remember that this is a volunteer-driven project and everybody has limited time."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#github-workflow-for-team-contributions",
+    "href": "CONTRIBUTING.html#github-workflow-for-team-contributions",
+    "title": "Contributing to group_15_data_wrangling",
+    "section": "",
+    "text": "For this project, our team follows the GitHub Flow:\n\nCreate a branch from dev-milestone-n for each feature, function, or fix.\n\nBranch naming convention: feature/&lt;function_name&gt; or fix/&lt;issue_name&gt;\n\nWork on your branch locally. Make commits regularly with meaningful messages.\nPush your branch to GitHub:\ngit push -u origin &lt;branch_name&gt;\nCreate a pull request (PR) to merge your branch into dev-milestone-n.\n\nMake sure to link the relevant issue if there is one.\n\n\nThe pull request should include tests.\nIf the pull request adds functionality, the docs should be updated. Put your new functionality into a function with a docstring.\nYour pull request will automatically be checked by the full test suite. It needs to pass all of them before it can be considered for merging.\n\nAnother team member reviews the PR and approves it.\n\nProvide constructive feedback if changes are needed.\n\nOnce approved, merge the PR into dev-milestone-n.\n\nUse “Merge pull request”.\n\nDelete the branch after merging to keep the repository clean.\n\nThis avoids clutter in the repository and keeps dev-milestone-n organized."
   },
   {
     "objectID": "reference/index.html",
@@ -365,6 +317,54 @@
       "Reference",
       "Functions",
       "cat_mode_impute"
+    ]
+  },
+  {
+    "objectID": "reference/set_dtype.html",
+    "href": "reference/set_dtype.html",
+    "title": "set_dtype",
+    "section": "",
+    "text": "set_dtype(df)\nUpdate the data types for each columns to increase efficiency.\nSets the follow dtypes: age int8 workclass category fnlwgt int32 education category education.num int8 marital.status category occupation category relationship category race category sex category capital.gain int32 capital.loss int32 hours.per.week int8 native.country category income category\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.Dataframe\nThe adult census income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.Dataframe\nThe adult census imcome dataframe with updated data types.\n\n\n\n\n\n\n&gt;&gt;&gt; set_dtype(adult_census_df)",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "set_dtype"
+    ]
+  },
+  {
+    "objectID": "reference/set_dtype.html#parameters",
+    "href": "reference/set_dtype.html#parameters",
+    "title": "set_dtype",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ndf\npd.Dataframe\nThe adult census income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "set_dtype"
+    ]
+  },
+  {
+    "objectID": "reference/set_dtype.html#returns",
+    "href": "reference/set_dtype.html#returns",
+    "title": "set_dtype",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\npd.Dataframe\nThe adult census imcome dataframe with updated data types.",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "set_dtype"
+    ]
+  },
+  {
+    "objectID": "reference/set_dtype.html#examples",
+    "href": "reference/set_dtype.html#examples",
+    "title": "set_dtype",
+    "section": "",
+    "text": "&gt;&gt;&gt; set_dtype(adult_census_df)",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "set_dtype"
     ]
   }
 ]
