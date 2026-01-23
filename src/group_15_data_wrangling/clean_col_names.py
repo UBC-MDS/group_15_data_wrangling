@@ -23,9 +23,16 @@ def clean_col_name(df: pd.DataFrame) -> pd.DataFrame:
     df : pd.DataFrame
         The dataframe with new, meaningful column names.
 
+    Raises
+    ------
+    TypeError
+        If `df` is not a pandas DataFrame.
+    ValueError
+        If `fnlwgt` is not a column of df.   
+
     Examples
     --------
-    >>> clean_col_name(df)
+    >>> clean_col_name(adult_census_df)
 
     """
     if not isinstance(df, pd.DataFrame):
