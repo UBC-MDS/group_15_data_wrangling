@@ -36,4 +36,9 @@ def test_encode_income_binary_correct_vals_in_income(adult_df):
     vals=df_test["income"].unique()
     assert set(vals) =={"<=50K", ">50K"}
 
+def test_encode_income_binary_same_row_count(adult_df):
+    """Making sure that encoding does not change the number of rows."""
+    result = encode_income_binary(adult_df)
+    assert len(result) == len(adult_df)
+
 
