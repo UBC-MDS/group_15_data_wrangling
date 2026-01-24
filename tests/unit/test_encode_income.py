@@ -30,5 +30,10 @@ def test_encode_income_binary_raises_error_if_wrong_input_type():
     with pytest.raises(TypeError):
         encode_income_binary(wrong_input)
 
+def test_encode_income_binary_correct_vals_in_income(adult_df): 
+    """Making sure that the values in the income column are only <=50K and >50K"""
+    df_test=adult_df
+    vals=df_test["income"].unique()
+    assert set(vals) =={"<=50K", ">50K"}
 
 
