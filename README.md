@@ -58,8 +58,10 @@ To use `group_15_data_wrangling` in your code:
 
 ```bash
 git clone <repo> # clone group_15_data_wrangling repo
+cd group_15_data_wrangling # cd into the project directory
 conda env create -f environment.yml # setup dev environment
-pip install -e .[test,dev,docs] # install package and development dependencies
+conda activate group-15-env # activate the env
+pip install -e .[tests,dev,docs] # install package and development dependencies
 ```
 
 ### Run tests
