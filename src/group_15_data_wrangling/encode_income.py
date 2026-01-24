@@ -1,5 +1,5 @@
 """
-A module that encodes the target income column
+A module that encodes the target income column.
 
 The goal is to convert the target variable into a binary numeric representation. Our target
 varibale is currently categorical, so encoding this column into a binary representation 
@@ -24,15 +24,23 @@ def encode_income_binary(df: pd.DataFrame, target_column: str = "income") -> pd.
         https://www.kaggle.com/datasets/uciml/adult-census-income
     target_column : str, default 'income'
         Name of the income column to encode.
-
+         
     Returns
     -------
     pd.DataFrame
         A dataframe with an additional column called income_binary.
 
+    Raises
+    ------
+    TypeError
+        If `df` is not a pandas DataFrame.
+    ValueError
+        If `target` is not a column of df.     
+
     Examples
     --------
-    - encode_income_binary(adult_census_df)
+    >>> encode_income_binary(adult_census_df)
+
     """
     
     if not isinstance(df, pd.DataFrame):

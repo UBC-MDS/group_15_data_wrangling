@@ -1,7 +1,7 @@
 """
 A module that sets the data type for the Adult Census Income dataset.
 
-The purpose of this is to increase memory and compute efficiency
+The purpose of this is to increase memory and compute efficiency.
 """
 
 import pandas as pd
@@ -37,6 +37,14 @@ def set_dtype(df: pd.DataFrame) -> pd.DataFrame:
     -------
     pd.Dataframe
         The adult census imcome dataframe with updated data types.
+
+    Raises
+    ------
+    TypeError
+        If `df` is not a pandas DataFrame.
+    ValueError
+        If columns do not match the columns of the adult census income dataset 
+        from kaggle. See Parameters.   
 
     Examples
     --------

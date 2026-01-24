@@ -1,3 +1,7 @@
+"""
+A module that performing cleaning and mode-based imputation for categorical data.
+"""
+
 import pandas as pd
 
 def cat_mode_impute(data, columns=None, sign="?"):
@@ -39,6 +43,10 @@ def cat_mode_impute(data, columns=None, sign="?"):
     KeyError
         If a column in `columns` is missing from the DataFrame.
 
+    Examples
+    --------
+    >>> cat_mode_impute(adult_census_df)    
+        
     """
 
     if not isinstance(data, pd.DataFrame):
