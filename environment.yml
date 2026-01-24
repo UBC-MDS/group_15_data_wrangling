@@ -2,5 +2,5 @@ name: group-15-env
 channels:
   - conda-forge
 dependencies:
-  - python
+  - python=3.10
   - copier
