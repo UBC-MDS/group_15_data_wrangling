@@ -30,5 +30,25 @@ def test_encode_income_binary_raises_error_if_wrong_input_type():
     with pytest.raises(TypeError):
         encode_income_binary(wrong_input)
 
+def test_encode_income_binary_correct_vals_in_income(adult_df): 
+    """Making sure that the values in the income column are only <=50K and >50K"""
+    df_test=adult_df
+    vals=df_test["income"].unique()
+    assert set(vals) =={"<=50K", ">50K"}
+
+def test_encode_income_binary_same_row_count(adult_df):
+    """Making sure that encoding does not change the number of rows."""
+    result = encode_income_binary(adult_df)
+    assert len(result) == len(adult_df)
+
+def test_encode_income_binary_adds_only_one_column(adult_df):
+    result = encode_income_binary(adult_df)
+    expected = list(adult_df.columns) + ["income_binary"]
+    assert list(result.columns) == expected
+
+def test_encode_income_binary_no_missing_values(adult_df):
+    result = encode_income_binary(adult_df)
+    assert result["income_binary"].isna().sum() == 0
+
 
 
