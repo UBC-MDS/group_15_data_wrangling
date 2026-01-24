@@ -60,7 +60,7 @@
     "href": "reference/clean_col_name.html",
     "title": "clean_col_name",
     "section": "",
-    "text": "clean_col_name(df)\nRename columns for consistency and readability and return the new dataframe.\n\nReplace ‘.’ with ’_’\nRename ‘fnlwgt’ to a more meaningful name\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nDataframe including the Adult Census Income dataset.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\ndf\npd.DataFrame\nThe dataframe with new, meaningful column names.\n\n\n\n\n\n\n&gt;&gt;&gt; clean_col_name(df)",
+    "text": "clean_col_name(df)\nRename columns for consistency and readability and return the new dataframe.\n\nReplace ‘.’ with ’_’\nRename ‘fnlwgt’ to a more meaningful name\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nDataframe including the Adult Census Income dataset.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\ndf\npd.DataFrame\nThe dataframe with new, meaningful column names.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf df is not a pandas DataFrame.\n\n\n\nValueError\nIf fnlwgt is not a column of df.\n\n\n\n\n\n\n&gt;&gt;&gt; clean_col_name(adult_census_df)",
     "crumbs": [
       "Reference",
       "Functions",
@@ -92,11 +92,23 @@
     ]
   },
   {
+    "objectID": "reference/clean_col_name.html#raises",
+    "href": "reference/clean_col_name.html#raises",
+    "title": "clean_col_name",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nTypeError\nIf df is not a pandas DataFrame.\n\n\n\nValueError\nIf fnlwgt is not a column of df.",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "clean_col_name"
+    ]
+  },
+  {
     "objectID": "reference/clean_col_name.html#examples",
     "href": "reference/clean_col_name.html#examples",
     "title": "clean_col_name",
     "section": "",
-    "text": "&gt;&gt;&gt; clean_col_name(df)",
+    "text": "&gt;&gt;&gt; clean_col_name(adult_census_df)",
     "crumbs": [
       "Reference",
       "Functions",
@@ -108,7 +120,7 @@
     "href": "reference/encode_income_binary.html",
     "title": "encode_income_binary",
     "section": "",
-    "text": "encode_income_binary(df, target_column='income')\nEncode the income column of the Adult Census Income dataset into a binary target.\nThis function creates a binary target column where: - ‘&lt;=50K’ is encoded as 0 - ‘&gt;50K’ is encoded as 1\nA new column named ‘income_binary’ is added to the returned DataFrame.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nThe adult census income dataset found here in csv form: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\ntarget_column\nstr\nName of the income column to encode.\n'income'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA dataframe with an additional column called income_binary.\n\n\n\n\n\n\n\nencode_income_binary(adult_census_df)",
+    "text": "encode_income_binary(df, target_column='income')\nEncode the income column of the Adult Census Income dataset into a binary target.\nThis function creates a binary target column where: - ‘&lt;=50K’ is encoded as 0 - ‘&gt;50K’ is encoded as 1\nA new column named ‘income_binary’ is added to the returned DataFrame.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.DataFrame\nThe adult census income dataset found here in csv form: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\ntarget_column\nstr\nName of the income column to encode.\n'income'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA dataframe with an additional column called income_binary.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf df is not a pandas DataFrame.\n\n\n\nValueError\nIf target is not a column of df.\n\n\n\n\n\n\n&gt;&gt;&gt; encode_income_binary(adult_census_df)",
     "crumbs": [
       "Reference",
       "Functions",
@@ -140,11 +152,23 @@
     ]
   },
   {
+    "objectID": "reference/encode_income_binary.html#raises",
+    "href": "reference/encode_income_binary.html#raises",
+    "title": "encode_income_binary",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nTypeError\nIf df is not a pandas DataFrame.\n\n\n\nValueError\nIf target is not a column of df.",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "encode_income_binary"
+    ]
+  },
+  {
     "objectID": "reference/encode_income_binary.html#examples",
     "href": "reference/encode_income_binary.html#examples",
     "title": "encode_income_binary",
     "section": "",
-    "text": "encode_income_binary(adult_census_df)",
+    "text": "&gt;&gt;&gt; encode_income_binary(adult_census_df)",
     "crumbs": [
       "Reference",
       "Functions",
@@ -276,7 +300,7 @@
     "href": "reference/cat_mode_impute.html",
     "title": "cat_mode_impute",
     "section": "",
-    "text": "cat_mode_impute(data, columns=None, sign='?')\nPerforms cleaning and mode-based imputation for categorical data.\nThis function identifies missing values (e.g. “?”), and replaces them with the most frequent (mode) category observed in that column. The imputation is performed independently for each targeted column. If columns is None, the function automatically targets all columns in the DataFrame that contain at least one occurrence of sign. If multiple categories are tied for the mode, the imputed value is chosen deterministically as the lexicographically smallest category.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndata\npd.DataFrame\nThe raw input DataFrame (e.g., Adult Census Income data).\nrequired\n\n\ncolumns\nlist of str\nThe specific columns to clean and impute. If None, all columns that contain the missing value indicator sign are targeted.\nNone\n\n\nsign\nstr\nThe specific string used in the dataset to denote missing values.\n\"?\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA cleaned DataFrame, where the signs have been replaced by the column mode.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf data is not a pandas DataFrame.\n\n\n\nValueError\nIf sign is not found in any of the targeted columns, or if a targeted column contains only missing values.\n\n\n\nKeyError\nIf a column in columns is missing from the DataFrame.",
+    "text": "cat_mode_impute(data, columns=None, sign='?')\nPerforms cleaning and mode-based imputation for categorical data.\nThis function identifies missing values (e.g. “?”), and replaces them with the most frequent (mode) category observed in that column. The imputation is performed independently for each targeted column. If columns is None, the function automatically targets all columns in the DataFrame that contain at least one occurrence of sign. If multiple categories are tied for the mode, the imputed value is chosen deterministically as the lexicographically smallest category.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndata\npd.DataFrame\nThe raw input DataFrame (e.g., Adult Census Income data).\nrequired\n\n\ncolumns\nlist of str\nThe specific columns to clean and impute. If None, all columns that contain the missing value indicator sign are targeted.\nNone\n\n\nsign\nstr\nThe specific string used in the dataset to denote missing values.\n\"?\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.DataFrame\nA cleaned DataFrame, where the signs have been replaced by the column mode.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf data is not a pandas DataFrame.\n\n\n\nValueError\nIf sign is not found in any of the targeted columns, or if a targeted column contains only missing values.\n\n\n\nKeyError\nIf a column in columns is missing from the DataFrame.\n\n\n\n\n\n\n&gt;&gt;&gt; cat_mode_impute(adult_census_df)",
     "crumbs": [
       "Reference",
       "Functions",
@@ -320,11 +344,23 @@
     ]
   },
   {
+    "objectID": "reference/cat_mode_impute.html#examples",
+    "href": "reference/cat_mode_impute.html#examples",
+    "title": "cat_mode_impute",
+    "section": "",
+    "text": "&gt;&gt;&gt; cat_mode_impute(adult_census_df)",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "cat_mode_impute"
+    ]
+  },
+  {
     "objectID": "reference/set_dtype.html",
     "href": "reference/set_dtype.html",
     "title": "set_dtype",
     "section": "",
-    "text": "set_dtype(df)\nUpdate the data types for each columns to increase efficiency.\nSets the follow dtypes: age int8 workclass category fnlwgt int32 education category education.num int8 marital.status category occupation category relationship category race category sex category capital.gain int32 capital.loss int32 hours.per.week int8 native.country category income category\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.Dataframe\nThe adult census income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.Dataframe\nThe adult census imcome dataframe with updated data types.\n\n\n\n\n\n\n&gt;&gt;&gt; set_dtype(adult_census_df)",
+    "text": "set_dtype(df)\nUpdate the data types for each columns to increase efficiency.\nSets the follow dtypes: age int8 workclass category fnlwgt int32 education category education.num int8 marital.status category occupation category relationship category race category sex category capital.gain int32 capital.loss int32 hours.per.week int8 native.country category income category\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndf\npd.Dataframe\nThe adult census income dataset found here: https://www.kaggle.com/datasets/uciml/adult-census-income\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\npd.Dataframe\nThe adult census imcome dataframe with updated data types.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf df is not a pandas DataFrame.\n\n\n\nValueError\nIf columns do not match the columns of the adult census income dataset from kaggle. See Parameters.\n\n\n\n\n\n\n&gt;&gt;&gt; set_dtype(adult_census_df)",
     "crumbs": [
       "Reference",
       "Functions",
@@ -349,6 +385,18 @@
     "title": "set_dtype",
     "section": "",
     "text": "Name\nType\nDescription\n\n\n\n\n\npd.Dataframe\nThe adult census imcome dataframe with updated data types.",
+    "crumbs": [
+      "Reference",
+      "Functions",
+      "set_dtype"
+    ]
+  },
+  {
+    "objectID": "reference/set_dtype.html#raises",
+    "href": "reference/set_dtype.html#raises",
+    "title": "set_dtype",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nTypeError\nIf df is not a pandas DataFrame.\n\n\n\nValueError\nIf columns do not match the columns of the adult census income dataset from kaggle. See Parameters.",
     "crumbs": [
       "Reference",
       "Functions",
