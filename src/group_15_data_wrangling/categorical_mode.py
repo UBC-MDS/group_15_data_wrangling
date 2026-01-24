@@ -43,6 +43,10 @@ def cat_mode_impute(data, columns=None, sign="?"):
     KeyError
         If a column in `columns` is missing from the DataFrame.
 
+    Examples
+    --------
+    >>> cat_mode_impute(adult_census_df)    
+        
     """
 
     if not isinstance(data, pd.DataFrame):
