@@ -2,7 +2,7 @@
 
 |         |        |
 |---------|--------|
-| Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/group_15_data_wrangling.svg)](https://pypi.org/project/group_15_data_wrangling/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/group_15_data_wrangling.svg)](https://pypi.org/project/group_15_data_wrangling/)  |
+| Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/group_15_data_wrangling.svg?repository=testpypi)](https://test.pypi.org/project/group_15_data_wrangling/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/group_15_data_wrangling.svg?repository=testpypi)](https://test.pypi.org/project/group_15_data_wrangling/)  |
 | Meta    | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
 
 ## Package Summary
