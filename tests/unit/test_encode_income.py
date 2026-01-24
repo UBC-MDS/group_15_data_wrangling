@@ -46,4 +46,9 @@ def test_encode_income_binary_adds_only_one_column(adult_df):
     expected = list(adult_df.columns) + ["income_binary"]
     assert list(result.columns) == expected
 
+def test_encode_income_binary_no_missing_values(adult_df):
+    result = encode_income_binary(adult_df)
+    assert result["income_binary"].isna().sum() == 0
+
+
 
