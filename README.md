@@ -30,6 +30,8 @@ This package aim to simplify the data wrangling for the Adult Census Income data
 - `encode_income_binary()`
   - encode the target feature, income, as binary
 
+See all function documentation here: [Function documentation](https://ubc-mds.github.io/group_15_data_wrangling/reference/)
+
 ### How this package fits into python ecosystem
 
 There is an existant package called `pyjanitor` that has many useful data cleaning routines. These are general purpose and very powerful. Our package is much more focused on cleaning the specific adult census income dataset. In general `pyjanitor` is a much more useful package, but to tidy our specific dataset our functions will probably do the job with less effort.
