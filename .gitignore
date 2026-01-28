@@ -246,6 +246,6 @@ cython_debug/
 #.idea/
 
 # Hatch-VCS
-_version.py
+__version__.py
 
 /.quarto/

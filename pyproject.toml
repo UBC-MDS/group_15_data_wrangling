@@ -4,7 +4,7 @@
 
 [build-system]
 build-backend = "hatchling.build"
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 
 ################################################################################
 # Project Configuration
@@ -13,7 +13,8 @@ requires = ["hatchling"]
 [project]
 name = "group_15_data_wrangling"
 # You can chose to use dynamic versioning with hatch or static where you add it manually.
-version = "0.1.2"
+# version = "0.1.2"
+dynamic = ["version"]
 
 description = "Provide easy function to streamline simple data wrangling tasks."
 authors = [
@@ -54,6 +55,7 @@ Download = "https://pypi.org/project/group_15_data_wrangling/#files"
 
 dev = [
     "hatch",
+    "hatch-vcs"
 ]
 
 docs = [
@@ -88,7 +90,12 @@ only-packages = true
 [tool.hatch.build.targets.wheel]
 packages = ["src/group_15_data_wrangling"]
 
+[tool.hatch.version]
+source = "vcs"
+raw-options = { version_scheme = "no-guess-dev", local_scheme = "no-local-version" }
 
+[tool.hatch.build.hooks.vcs]
+version-file = "src/group_15_data_wrangling/__version__.py"
 
 ######## Configure pytest for your test suite ########
 [tool.pytest.ini_options]
