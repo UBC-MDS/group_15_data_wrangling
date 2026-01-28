@@ -55,15 +55,21 @@ def set_dtype(df: pd.DataFrame) -> pd.DataFrame:
     if not isinstance(df, pd.DataFrame):
         raise TypeError(f"Expected input to be pandas DataFrame, got {type(df)}")
     
-    expected_columns = {
+    expected_columns1 = {
         'occupation', 'capital.loss', 'race', 'age', 'education', 
         'native.country', 'marital.status', 'income', 'capital.gain', 
         'workclass', 'fnlwgt', 'relationship', 'sex', 'hours.per.week', 
         'education.num'
     }
+
+    expected_columns2 = {'capital-gain', 'race', 'sex', 'education', 
+     'age', 'fnlwgt', 'education-num', 'native-country', 
+     'occupation', 'capital-loss', 'marital-status', 'relationship', 
+     'income', 'workclass', 'hours-per-week'}
+
     actual_columns = set(df.columns)
-    if not (actual_columns == expected_columns):
-        raise ValueError(f"Expected input DataFrame to have these columns: {expected_columns}, got: {actual_columns}")
+    if not (actual_columns == expected_columns1 or actual_columns == expected_columns2):
+        raise ValueError(f"Expected input DataFrame to have these columns: {expected_columns1}, got: {actual_columns}")
 
     df = df.astype({
         "age": "int8",
