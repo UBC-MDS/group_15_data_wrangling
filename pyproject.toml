@@ -41,10 +41,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/meirikson/group_15_data_wrangling"
-"Source Code" = "https://github.com/meirikson/group_15_data_wrangling"
-"Bug Tracker" = "https://github.com/meirikson/group_15_data_wrangling/issues"
-Documentation = "https://github.com/meirikson/group_15_data_wrangling/blob/main/README.md"
+Homepage = "https://github.com/UBC-MDS/group_15_data_wrangling"
+"Source Code" = "https://github.com/UBC-MDS/group_15_data_wrangling"
+"Bug Tracker" = "https://github.com/UBC-MDS/group_15_data_wrangling/issues"
+Documentation = "https://github.com/UBC-MDS/group_15_data_wrangling/blob/main/README.md"
 Download = "https://pypi.org/project/group_15_data_wrangling/#files"
 
 [project.optional-dependencies]
