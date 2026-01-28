@@ -94,5 +94,5 @@ quarto publish gh-pages
 
 ## Copyright
 
-- Copyright © 2026 Michael Eirikson.
+- Copyright © 2026 Michael Eirikson, Limor Winter, Shihan Xu, Zaki Aslam
 - Free software distributed under the [MIT License](./LICENSE).
