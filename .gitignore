@@ -249,3 +249,7 @@ cython_debug/
 __version__.py
 
 /.quarto/
+
+# fix feedback 3 - omit optional project metadata files
+.editorconfig
+objects.json
