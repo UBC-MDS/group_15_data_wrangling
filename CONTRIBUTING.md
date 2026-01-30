@@ -86,3 +86,21 @@ For this project, our team follows the **GitHub Flow**:
 
 7. **Delete the branch** after merging to keep the repository clean.  
    * This avoids clutter in the repository and keeps `dev-milestone-n` organized.
+
+## Development tools, infrastructure, and project organization
+
+In this project, we applied several development tools and organizational
+practices introduced in DSCI-524 to support collaborative and reproducible
+work. We used GitHub Issues to track tasks, bugs, and feedback from peer reviewers
+and the TA. At the beginning of every milestone/week we would organize all the tasks that had to be completed using Github Projects. This was a very handy way for our group to stay organized and track what had to be completed before the deadline. 
+
+All development was done using our own separate branches to complete our work (a concept introduced in DSCI 522). For this project, pull requests were first merged into a weekly milestone branch and then merged into the main branch. This ensured that changes were reviewed by team members before being merged, which helped with keeping each other accountable for each respective team members work. 
+
+We used GitHub Actions for continuous integration to automatically run tests
+and build documentation on every pull request. This provided fast feedback and
+helped ensure that the package remained in a working state throughout
+development. Testing was done using pytest, with test dependencies
+specified as optional extras in our pyproject.toml file. Documentation was created using Quarto aand quartodoc, giving us a clear documentation website directly from the source code. 
+
+### Scaling considerations
+If we had to scale up our project we'd still use much of the same tools we've learned in this course, while placing a greater emphasis on automation and code quality controls. This could include enforcing mandatory pull-request reviews and adding stricter automated checks in our CI pipelines. We would also probably expand test coverage to help catch bugs early as new features are added. Clearer contribution guidelines and more detailed documentation would make it easier for new contributors to get started and help keep development practices consistent across the team.
