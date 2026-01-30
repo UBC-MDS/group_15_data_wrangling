@@ -9,7 +9,17 @@
 
 ## Package Summary
 
-This package aim to simplify the data wrangling for the Adult Census Income dataset found here: <https://www.kaggle.com/datasets/uciml/adult-census-income>. This will make it easier for someone who want to work with the data to quickly get the dataset in a clean format where they can then start analysis right away.
+This package aim to simplify the data wrangling for the Adult Census Income dataset found [here](https://www.kaggle.com/datasets/uciml/adult-census-income). This will make it easier for someone who want to work with the data to quickly get the dataset in a clean format where they can then start analysis right away.
+
+### Links
+
+[Documentation](https://ubc-mds.github.io/group_15_data_wrangling/)
+
+[Github](https://github.com/UBC-MDS/group_15_data_wrangling)
+
+[PyPI-test](https://test.pypi.org/project/group-15-data-wrangling/)
+
+[Data](https://www.kaggle.com/datasets/uciml/adult-census-income)
 
 ### Functions
 
@@ -22,11 +32,13 @@ This package aim to simplify the data wrangling for the Adult Census Income data
 - `encode_income_binary()`
   - encode the target feature, income, as binary
 
+See all function documentation here: [Function documentation](https://ubc-mds.github.io/group_15_data_wrangling/reference/)
+
 ### How this package fits into python ecosystem
 
 There is an existant package called `pyjanitor` that has many useful data cleaning routines. These are general purpose and very powerful. Our package is much more focused on cleaning the specific adult census income dataset. In general `pyjanitor` is a much more useful package, but to tidy our specific dataset our functions will probably do the job with less effort.
 
-`pyjanitor`: <https://github.com/pyjanitor-devs/pyjanitor>
+[pyjanitor](https://github.com/pyjanitor-devs/pyjanitor)
 
 ## Get started
 
@@ -36,25 +48,43 @@ You can install this package into your preferred Python environment using pip:
 pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple group_15_data_wrangling
 ```
 
+The data can be downloaded from [Kaggle](https://www.kaggle.com/datasets/uciml/adult-census-income), or downloaded from UCIrvine wich you can get by using:
+
+```bash
+pip install ucimlrepo
+```
+
 To use `group_15_data_wrangling` in your code:
 
 ```python
->>> from group_15_data_wrangling import cat_mode_impute, clean_col_name, encode_income_binary, set_dtype
->>> census_df_no_nan = cat_mode_impute(census_df)
->>> census_df_clean_names = clean_col_name(census_df)
->>> census_df_binary_income = encode_income_binary(census_df)
->>> census_df_consise_dtypes = set_dtype(census_df)
+# imports
+from group_15_data_wrangling import cat_mode_impute, clean_col_name, encode_income_binary, set_dtype
+from ucimlrepo import fetch_ucirepo 
+  
+# fetch dataset 
+adult = fetch_ucirepo(id=2) 
+  
+# census data as pandas dataframes
+X = adult.data.features 
+y = adult.data.targets 
+census_df = X.join(y)
+
+# use function from this package
+census_df_no_nan = cat_mode_impute(census_df)
+census_df_clean_names = clean_col_name(census_df)
+census_df_binary_income = encode_income_binary(census_df)
+census_df_consise_dtypes = set_dtype(census_df)
 ```
 
 ### Documentation
 
-[Documentation can be found here](https://ubc-mds.github.io/group_15_data_wrangling/)
+[Documentation](https://ubc-mds.github.io/group_15_data_wrangling/)
 
 ## Contributing
 
 ### Github repo
 
-<https://github.com/UBC-MDS/group_15_data_wrangling>
+[Repo](https://github.com/UBC-MDS/group_15_data_wrangling)
 
 ### Get started contributing
 
@@ -96,5 +126,5 @@ quarto publish gh-pages
 
 ## Copyright
 
-- Copyright © 2026 Michael Eirikson.
+- Copyright © 2026 Michael Eirikson, Limor Winter, Shihan Xu, Zaki Aslam
 - Free software distributed under the [MIT License](./LICENSE).

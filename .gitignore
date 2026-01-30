@@ -246,8 +246,13 @@ cython_debug/
 #.idea/
 
 # Hatch-VCS
-_version.py
+__version__.py
 
 /.quarto/
 
 **/*.quarto_ipynb
+
+# fix feedback 3 - omit optional project metadata files
+.editorconfig
+objects.json
+
