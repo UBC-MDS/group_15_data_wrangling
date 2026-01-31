@@ -53,4 +53,7 @@ def encode_income_binary(df: pd.DataFrame, target_column: str = "income") -> pd.
     output=df.copy()
     output["income_binary"] = output[target_column].map(encoded_vals)
 
+    if output["income_binary"].isna().any():
+        raise ValueError("Unexpected income values")
+
     return output

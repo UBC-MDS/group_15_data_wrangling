@@ -1,5 +1,7 @@
 # Welcome to group_15_data_wrangling
 
+[![codecov](https://codecov.io/github/UBC-MDS/group_15_data_wrangling/graph/badge.svg?token=EzYcmANh2s)](https://codecov.io/github/UBC-MDS/group_15_data_wrangling)
+
 |         |        |
 |---------|--------|
 | Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/group_15_data_wrangling.svg)](https://pypi.org/project/group_15_data_wrangling/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/group_15_data_wrangling.svg)](https://pypi.org/project/group_15_data_wrangling/)  |

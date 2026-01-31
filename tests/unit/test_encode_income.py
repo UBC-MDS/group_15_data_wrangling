@@ -50,5 +50,8 @@ def test_encode_income_binary_no_missing_values(adult_df):
     result = encode_income_binary(adult_df)
     assert result["income_binary"].isna().sum() == 0
 
-
+def test_encode_income_binary_raises_error_for_unexpected_income_values():
+    df = pd.DataFrame({"income": ["<=50K", "unknown"]})
+    with pytest.raises(ValueError):
+        encode_income_binary(df)
 
