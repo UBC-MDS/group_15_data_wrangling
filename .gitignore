@@ -245,7 +245,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# Hatch-VCS
+# Hatch-VCS for correct version tag
 __version__.py
 
 /.quarto/
