@@ -13,8 +13,10 @@ requires = ["hatchling", "hatch-vcs"]
 [project]
 name = "group_15_data_wrangling"
 # You can chose to use dynamic versioning with hatch or static where you add it manually.
+
 # version = "0.1.2"
 dynamic = ["version"]
+
 
 description = "Provide easy function to streamline simple data wrangling tasks."
 authors = [
@@ -155,7 +157,7 @@ features = [
 python = ["3.10", "3.11", "3.12", "3.13"]
 
 [tool.hatch.envs.test.scripts]
-run = "pytest {args:--cov=group_15_data_wrangling --cov-report=term-missing --cov-report=xml}"
+run = "pytest {args:--cov=group_15_data_wrangling --cov-branch --cov-report=term-missing --cov-report=xml}"
 
 #--------------- Build and preview your documentation ---------------#
 

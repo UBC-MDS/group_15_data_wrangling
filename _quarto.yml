@@ -11,6 +11,8 @@ website:
         href: index.qmd
       - text: Reference
         href: reference/index.qmd
+      - text: Contributing
+        href: CONTRIBUTING.md
 
 # tell quarto to read the generated sidebar
 metadata-files:
