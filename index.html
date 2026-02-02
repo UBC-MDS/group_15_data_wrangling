@@ -133,6 +133,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./reference/index.html"> 
 <span class="menu-text">Reference</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./CONTRIBUTING.html"> 
+<span class="menu-text">Contributing</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -173,7 +177,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <section id="package-summary" class="level2">
 <h2 class="anchored" data-anchor-id="package-summary">Package Summary</h2>
-<p>This package aim to simplify the data wrangling for the Adult Census Income dataset found here: <a href="https://www.kaggle.com/datasets/uciml/adult-census-income" class="uri">https://www.kaggle.com/datasets/uciml/adult-census-income</a>. This will make it easier for someone who want to work with the data to quickly get the dataset in a clean format where they can then start analysis right away.</p>
+<p>This package aim to simplify the data wrangling for the Adult Census Income dataset found <a href="https://www.kaggle.com/datasets/uciml/adult-census-income">here</a>. This will make it easier for someone who want to work with the data to quickly get the dataset in a clean format where they can then start analysis right away.</p>
+<section id="links" class="level3">
+<h3 class="anchored" data-anchor-id="links">Links</h3>
+<p><a href="https://ubc-mds.github.io/group_15_data_wrangling/">Documentation</a></p>
+<p><a href="https://github.com/UBC-MDS/group_15_data_wrangling">Github</a></p>
+<p><a href="https://test.pypi.org/project/group-15-data-wrangling/">PyPI-test</a></p>
+<p><a href="https://www.kaggle.com/datasets/uciml/adult-census-income">Data</a></p>
+</section>
 <section id="functions" class="level3">
 <h3 class="anchored" data-anchor-id="functions">Functions</h3>
 <ul>
@@ -194,53 +205,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>encode the target feature, income, as binary</li>
 </ul></li>
 </ul>
+<p>See all function documentation here: <a href="https://ubc-mds.github.io/group_15_data_wrangling/reference/">Function documentation</a></p>
 </section>
 <section id="how-this-package-fits-into-python-ecosystem" class="level3">
 <h3 class="anchored" data-anchor-id="how-this-package-fits-into-python-ecosystem">How this package fits into python ecosystem</h3>
 <p>There is an existant package called <code>pyjanitor</code> that has many useful data cleaning routines. These are general purpose and very powerful. Our package is much more focused on cleaning the specific adult census income dataset. In general <code>pyjanitor</code> is a much more useful package, but to tidy our specific dataset our functions will probably do the job with less effort.</p>
-<p><code>pyjanitor</code>: <a href="https://github.com/pyjanitor-devs/pyjanitor" class="uri">https://github.com/pyjanitor-devs/pyjanitor</a></p>
+<p><a href="https://github.com/pyjanitor-devs/pyjanitor">pyjanitor</a></p>
 </section>
 </section>
 <section id="get-started" class="level2">
 <h2 class="anchored" data-anchor-id="get-started">Get started</h2>
 <p>You can install this package into your preferred Python environment using pip:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">--index-url</span> https://test.pypi.org/simple/ <span class="at">--extra-index-url</span> https://pypi.org/simple group_15_data_wrangling</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The data can be downloaded from <a href="https://www.kaggle.com/datasets/uciml/adult-census-income">Kaggle</a>, or downloaded from UCIrvine wich you can get by using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install ucimlrepo</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To use <code>group_15_data_wrangling</code> in your code:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">from</span> group_15_data_wrangling <span class="im">import</span> cat_mode_impute, clean_col_name, encode_income_binary, set_dtype</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> census_df_no_nan <span class="op">=</span> cat_mode_impute(census_df)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> census_df_clean_names <span class="op">=</span> clean_col_name(census_df)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> census_df_binary_income <span class="op">=</span> encode_income_binary(census_df)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> census_df_consise_dtypes <span class="op">=</span> set_dtype(census_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># imports</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> group_15_data_wrangling <span class="im">import</span> cat_mode_impute, clean_col_name, encode_income_binary, set_dtype</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ucimlrepo <span class="im">import</span> fetch_ucirepo </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># fetch dataset </span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>adult <span class="op">=</span> fetch_ucirepo(<span class="bu">id</span><span class="op">=</span><span class="dv">2</span>) </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># census data as pandas dataframes</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> adult.data.features </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> adult.data.targets </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>census_df <span class="op">=</span> X.join(y)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># use function from this package</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>census_df_no_nan <span class="op">=</span> cat_mode_impute(census_df)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>census_df_clean_names <span class="op">=</span> clean_col_name(census_df)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>census_df_binary_income <span class="op">=</span> encode_income_binary(census_df)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>census_df_consise_dtypes <span class="op">=</span> set_dtype(census_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="documentation" class="level3">
 <h3 class="anchored" data-anchor-id="documentation">Documentation</h3>
-<p><a href="https://ubc-mds.github.io/group_15_data_wrangling/">Documentation can be found here</a></p>
+<p><a href="https://ubc-mds.github.io/group_15_data_wrangling/">Documentation</a></p>
 </section>
 </section>
 <section id="contributing" class="level2">
 <h2 class="anchored" data-anchor-id="contributing">Contributing</h2>
 <section id="github-repo" class="level3">
 <h3 class="anchored" data-anchor-id="github-repo">Github repo</h3>
-<p><a href="https://github.com/UBC-MDS/group_15_data_wrangling" class="uri">https://github.com/UBC-MDS/group_15_data_wrangling</a></p>
+<p><a href="https://github.com/UBC-MDS/group_15_data_wrangling">Repo</a></p>
 </section>
 <section id="get-started-contributing" class="level3">
 <h3 class="anchored" data-anchor-id="get-started-contributing">Get started contributing</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="op">&lt;</span>repo<span class="op">&gt;</span> <span class="co"># clone group_15_data_wrangling repo</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> group_15_data_wrangling <span class="co"># cd into the project directory</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml <span class="co"># setup dev environment</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate group-15-env <span class="co"># activate the env</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e</span> .<span class="pp">[</span><span class="ss">tests,dev,docs</span><span class="pp">]</span> <span class="co"># install package and development dependencies</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="op">&lt;</span>repo<span class="op">&gt;</span> <span class="co"># clone group_15_data_wrangling repo</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> group_15_data_wrangling <span class="co"># cd into the project directory</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml <span class="co"># setup dev environment</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate group-15-env <span class="co"># activate the env</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e</span> .<span class="pp">[</span><span class="ss">tests,dev,docs</span><span class="pp">]</span> <span class="co"># install package and development dependencies</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="run-tests" class="level3">
 <h3 class="anchored" data-anchor-id="run-tests">Run tests</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pytest</span> <span class="at">--cov</span><span class="op">=</span>src <span class="at">--cov-branch</span> <span class="at">--cov-report</span><span class="op">=</span>term-missing</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pytest</span> <span class="at">--cov</span><span class="op">=</span>src <span class="at">--cov-branch</span> <span class="at">--cov-report</span><span class="op">=</span>term-missing</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="build-preview-and-deploy-documentation" class="level3">
 <h3 class="anchored" data-anchor-id="build-preview-and-deploy-documentation">build, preview and deploy documentation</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quartodoc</span> build</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quartodoc</span> build</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Documentation website update automatically on push to <code>main</code>.</p>
 <p>To force update documentation website from the current branch run (probably don’t do this).</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="contributors" class="level2">
@@ -255,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="copyright" class="level2">
 <h2 class="anchored" data-anchor-id="copyright">Copyright</h2>
 <ul>
-<li>Copyright © 2026 Michael Eirikson.</li>
+<li>Copyright © 2026 Michael Eirikson, Limor Winter, Shihan Xu, Zaki Aslam</li>
 <li>Free software distributed under the <a href="./LICENSE">MIT License</a>.</li>
 </ul>
 

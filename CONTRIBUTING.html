@@ -98,6 +98,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./reference/index.html"> 
 <span class="menu-text">Reference</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./CONTRIBUTING.html" aria-current="page"> 
+<span class="menu-text">Contributing</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -185,8 +189,56 @@ ul.task-list li input[type="checkbox"] {
 <li>This avoids clutter in the repository and keeps <code>dev-milestone-n</code> organized.</li>
 </ul></li>
 </ol>
+</section>
+<section id="development-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="development-workflow">Development Workflow</h2>
+<p>In this project, we applied several development tools and organizational practices introduced in DSCI-524 to support collaborative and reproducible work. We used GitHub Issues to track tasks, bugs, and feedback from peer reviewers and the TA. At the beginning of every milestone/week we would organize all the tasks that had to be completed using Github Projects. This was a very handy way for our group to stay organized and track what had to be completed before the deadline.</p>
+<p>All development was done using our own separate branches to complete our work (a concept introduced in DSCI 522). For this project, pull requests were first merged into a weekly milestone branch and then merged into the main branch. This ensured that changes were reviewed by team members before being merged, which helped with keeping each other accountable for each respective team members work.</p>
+<p>We used GitHub Actions for continuous integration to automatically run tests and build documentation on every pull request. This provided fast feedback and helped ensure that the package remained in a working state throughout development. Testing was done using pytest, with test dependencies specified as optional extras in our pyproject.toml file. Documentation was created using Quarto aand quartodoc, giving us a clear documentation website directly from the source code.</p>
+<section id="scaling-considerations" class="level3">
+<h3 class="anchored" data-anchor-id="scaling-considerations">Scaling considerations</h3>
+<p>If we had to scale up our project we’d still use much of the same tools we’ve learned in this course, while placing a greater emphasis on automation and code quality controls. This could include enforcing mandatory pull-request reviews and adding stricter automated checks in our CI pipelines. We would also probably expand test coverage to help catch bugs early as new features are added. Clearer contribution guidelines and more detailed documentation would make it easier for new contributors to get started and help keep development practices consistent across the team. As with scaling up our project, the nature of our project might get more complex so it would be imperative to continue using Project Views and analytics when planning.</p>
+</section>
+</section>
+<section id="project-retrospective" class="level2">
+<h2 class="anchored" data-anchor-id="project-retrospective">Project retrospective</h2>
+<p>To support our retrospective, we reviewed GitHub Project views including a burn-up chart grouped by milestone and assignee, as well as table views grouped by milestone and assignee.</p>
+</section>
+<section id="analytical-views" class="level2">
+<h2 class="anchored" data-anchor-id="analytical-views">Analytical Views</h2>
+<section id="burn-up-chart-completion-rate" class="level3">
+<h3 class="anchored" data-anchor-id="burn-up-chart-completion-rate">Burn-up Chart (Completion rate)</h3>
+<p>When we observed our completion rate burn up chart we noticed the number of issues assigned were very even for three of our team members, Zaki, Limor and Shihan. Our fourth member, Michael had a few more issues assigned to him than the rest of the group.</p>
+</section>
+<section id="velocity" class="level3">
+<h3 class="anchored" data-anchor-id="velocity">Velocity</h3>
+<p>Their definelty was a change in the scope of work over time. The first milestone had one of the most issues (setting up the package and getting everythign sorted) than the next two milestones, milestone 2 and 3 the amount of work decreased significantly in terms of number of issues and then the last milestone (milestone 4) had the most issues assigned to it. One thing we noticed is that our group did not over commit or have extra items left in the “Todo” section at the of milestones. Every Milsetone’s respective issues were completed and marked as “done”</p>
+</section>
+<section id="contributions" class="level3">
+<h3 class="anchored" data-anchor-id="contributions">Contributions</h3>
+<p>Like mentioned before we beleive that everyone contributed equally in the project and that is reflected in the number of items assigned over the whole project. When looking at the team workload table in views, Limor, Shihan and Zaki all had 16 items assigned while Michael had 21.</p>
+</section>
+</section>
+<section id="daki-classification" class="level2">
+<h2 class="anchored" data-anchor-id="daki-classification">DAKI Classification</h2>
+<section id="keep" class="level3">
+<h3 class="anchored" data-anchor-id="keep">Keep</h3>
+<p>Using GitHub Issues, milestones, and pull requests helped keep work organized across all Milestones 1–4. Branch-based development worked well and reduced conflicts when merging into the main branch. Also continuing to use Project Views (highest formality) was something that we looked into this milestone 4 and we can see the clear benefit of using these views so thats something we’d definelty want to keep moving forward.</p>
+</section>
+<section id="add" class="level3">
+<h3 class="anchored" data-anchor-id="add">Add</h3>
+<p>As the project progressed, automated testing and CI became more important. Adding checks earlier will help us catch errors sooner and reduce debugging time later in the project.</p>
+</section>
+<section id="improve" class="level3">
+<h3 class="anchored" data-anchor-id="improve">Improve</h3>
+<p>We would improve pull-request review turnaround time by encouraging earlier reviews and clearer review guidelines.</p>
+</section>
+<section id="drop" class="level3">
+<h3 class="anchored" data-anchor-id="drop">Drop</h3>
+<p>For the most part we didn’t have any bottlenecks but going forward but we would drop working on large, loosely defined issues. Breaking tasks into smaller issues would make progress easier to track and reduce review bottlenecks if they did occur.</p>
 
 
+</section>
 </section>
 </section>
 
