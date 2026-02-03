@@ -246,12 +246,12 @@ cython_debug/
 #.idea/
 
 # Hatch-VCS for correct version tag.
-__version__.py
+src/group_15_data_wrangling/__version__.py
+
 
 /.quarto/
 
 **/*.quarto_ipynb
-
 # fix feedback 3 - omit optional project metadata files
 .editorconfig
 objects.json
