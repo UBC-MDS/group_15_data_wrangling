@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/CODE_OF_CONDUCT.html</loc>
-    <lastmod>2026-02-02T09:30:41.608Z</lastmod>
+    <lastmod>2026-02-03T23:40:49.085Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/reference/clean_col_name.html</loc>
-    <lastmod>2026-02-02T09:31:13.696Z</lastmod>
+    <lastmod>2026-02-03T23:41:18.967Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/reference/encode_income_binary.html</loc>
-    <lastmod>2026-02-02T09:31:13.704Z</lastmod>
+    <lastmod>2026-02-03T23:41:18.975Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/index.html</loc>
-    <lastmod>2026-02-02T09:30:41.609Z</lastmod>
+    <lastmod>2026-02-03T23:40:49.086Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/DEVELOPMENT.html</loc>
-    <lastmod>2026-02-02T09:30:41.608Z</lastmod>
+    <lastmod>2026-02-03T23:40:49.086Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/CHANGELOG.html</loc>
-    <lastmod>2026-02-02T09:30:41.608Z</lastmod>
+    <lastmod>2026-02-03T23:40:49.085Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/CONTRIBUTING.html</loc>
-    <lastmod>2026-02-02T09:30:41.608Z</lastmod>
+    <lastmod>2026-02-03T23:40:49.085Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/reference/index.html</loc>
-    <lastmod>2026-02-02T09:31:13.651Z</lastmod>
+    <lastmod>2026-02-03T23:41:18.922Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/reference/cat_mode_impute.html</loc>
-    <lastmod>2026-02-02T09:31:13.689Z</lastmod>
+    <lastmod>2026-02-03T23:41:18.960Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/group_15_data_wrangling/reference/set_dtype.html</loc>
-    <lastmod>2026-02-02T09:31:13.711Z</lastmod>
+    <lastmod>2026-02-03T23:41:18.982Z</lastmod>
   </url>
 </urlset>
